@@ -11,7 +11,7 @@ public class ReplaceProfile{
 
 	public ReplaceProfile(String username, String replaceWith) {
 
-		File file = new File("./src/UserProfiles.csv");
+		File file = new File("/Users/bahr2772/Documents/workspace/RoomieMatch/src/UserProfiles.csv");
 		
 		String temp = "";
 		String currentLine;

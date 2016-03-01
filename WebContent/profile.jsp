@@ -33,6 +33,7 @@
 
 
 
+
 	<%
 		if (session.getAttribute("username") == null || session.getAttribute("username") == "") {
 	%>
@@ -298,8 +299,8 @@
 									<td>Loudness:</td>
 									<td><select name="loud" id="profileLoud" onchange=""
 										size="1">
-											<option value=""
-												<c:if test="${sessionScope.loud ==''}"> selected </c:if>></option>
+											<option value="00"
+												<c:if test="${sessionScope.loud =='00'}"> selected </c:if>></option>
 											<option value="01"
 												<c:if test="${sessionScope.loud =='01'}"> selected </c:if>>Very
 												Very Quite</option>
@@ -318,8 +319,8 @@
 									<td>Cleanliness:</td>
 									<td><select name="clean" id="profileLoud" onchange=""
 										size="1">
-											<option value=""
-												<c:if test="${sessionScope.clean ==''}"> selected </c:if>></option>
+											<option value=00"
+												<c:if test="${sessionScope.clean =='00'}"> selected </c:if>></option>
 											<option value="01"
 												<c:if test="${sessionScope.clean =='01'}"> selected </c:if>>Total
 												Slob</option>
@@ -338,8 +339,8 @@
 									<td>Tv Time:</td>
 									<td><select name="tv" id="profileLoud" onchange=""
 										size="1">
-											<option value=""
-												<c:if test="${sessionScope.tv ==''}"> selected </c:if>></option>
+											<option value="00"
+												<c:if test="${sessionScope.tv =='00'}"> selected </c:if>></option>
 											<option value="01"
 												<c:if test="${sessionScope.tv =='01'}"> selected </c:if>>1
 												Hour a day</option>
@@ -358,8 +359,8 @@
 									<td>Hours playing Video Games?</td>
 									<td><select name="video" id="profileLoud" onchange=""
 										size="1">
-											<option value=""
-												<c:if test="${sessionScope.maxNum ==''}"> selected </c:if>></option>
+											<option value="00"
+												<c:if test="${sessionScope.maxNum =='00'}"> selected </c:if>></option>
 											<option value="01"
 												<c:if test="${sessionScope.maxNum =='01'}"> selected </c:if>>1
 												- 4 hours a day.</option>
@@ -375,8 +376,8 @@
 									<td>Cooking Skills:</td>
 									<td><select name="cook" id="profileLoud" onchange=""
 										size="1">
-											<option value=""
-												<c:if test="${sessionScope.cook ==''}"> selected </c:if>></option>
+											<option value="00"
+												<c:if test="${sessionScope.cook =='00'}"> selected </c:if>></option>
 											<option value="01"
 												<c:if test="${sessionScope.cook =='01'}"> selected </c:if>>ha,
 												yeah right. Barley Boil Water</option>
@@ -395,8 +396,8 @@
 									<td>Home Time:</td>
 									<td><select name="homeTime" id="profileLoud" onchange=""
 										size="1">
-											<option value=""
-												<c:if test="${sessionScope.homeTime ==''}"> selected </c:if>></option>
+											<option value="00"
+												<c:if test="${sessionScope.homeTime =='00'}"> selected </c:if>></option>
 											<option value="01"
 												<c:if test="${sessionScope.homeTime =='01'}"> selected </c:if>>Close
 												to Never</option>
@@ -415,7 +416,7 @@
 									<td>Home Most Often in:</td>
 									<td><select name="homeAmount" id="profileLoud" onchange=""
 										size="1">
-											<option value=""
+											<option value="00"
 												<c:if test="${sessionScope.homeAmount ==''}"> selected </c:if>></option>
 											<option value="01"
 												<c:if test="${sessionScope.homeAmount =='01'}"> selected </c:if>>Morning</option>
@@ -450,8 +451,8 @@
 									<td>Max number of Room mates</td>
 									<td><select name="maxRoomates" id="profileLoud"
 										onchange="" size="1">
-											<option value=""
-												<c:if test="${sessionScope.maxNum ==''}"> selected </c:if>></option>
+											<option value="00"
+												<c:if test="${sessionScope.maxNum =='00'}"> selected </c:if>></option>
 											<option value="01"
 												<c:if test="${sessionScope.maxNum =='01'}"> selected </c:if>>1</option>
 											<option value="02"
@@ -465,8 +466,8 @@
 									<td>Education Level</td>
 									<td><select name="edu" id="profileLoud" onchange=""
 										size="1">
-											<option value=""
-												<c:if test="${sessionScope.edu ==''}"> selected </c:if>></option>
+											<option value="00"
+												<c:if test="${sessionScope.edu =='00'}"> selected </c:if>></option>
 											<option value="01"
 												<c:if test="${sessionScope.edu =='01'}"> selected </c:if>>k
 												- 11</option>
@@ -492,8 +493,8 @@
 									<td>Max Rent Share</td>
 									<td><select name="maxRent" id="profileLoud" onchange=""
 										size="1">
-											<option value=""
-												<c:if test="${sessionScope.maxRent ==''}"> selected </c:if>></option>
+											<option value="00"
+												<c:if test="${sessionScope.maxRent =='00'}"> selected </c:if>></option>
 											<option value="01"
 												<c:if test="${sessionScope.maxRent =='01'}"> selected </c:if>>$0
 												- $100</option>

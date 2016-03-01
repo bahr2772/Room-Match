@@ -1,3 +1,4 @@
-apples,name,apples@email.com,00,,00,00,00,00,00,00,00,00,00,00,00,null,0
-TEST,,,16,null,,01,,,,,,,,,,null,0
-applesauce,name,applesauce@email.com,00,,00,00,00,00,00,00,00,00,00,00,00,null,0
+apples,name,apples@email.com,24,1,01,01,01,01,01,01,01,01,01,01,01,null,0
+test,name,test@email.com,17,1,05,05,04,03,04,04,05,03,03,06,07,null,0
+happy,name,happy@email.com,0,0,0,0,0,0,0,0,0,0,0,0,0,null,0
+man1,name,man@email.com,43,1,03,05,02,02,02,02,03,02,03,02,04,null,0

@@ -15,7 +15,7 @@ public class GetFileInfo {
 		
 		HttpSession session = request.getSession();
 
-		try (BufferedReader br = new BufferedReader(new FileReader("./src/UserCreds.csv")))
+		try (BufferedReader br = new BufferedReader(new FileReader("/Users/bahr2772/Documents/workspace/RoomieMatch/src/UserCreds.csv")))
 		{
 			String currentLine;
 
@@ -39,7 +39,7 @@ public class GetFileInfo {
 	}
 
 	public int credChecker(String username, String password){
-		try (BufferedReader br = new BufferedReader(new FileReader("./src/UserCreds.csv")))
+		try (BufferedReader br = new BufferedReader(new FileReader("/Users/bahr2772/Documents/workspace/RoomieMatch/src/UserCreds.csv")))
 		{
 			String currentLine;
 
@@ -60,7 +60,7 @@ public class GetFileInfo {
 	}
 		
 	public int usernameChecker(String username){
-		try (BufferedReader br = new BufferedReader(new FileReader("./src/UserCreds.csv")))
+		try (BufferedReader br = new BufferedReader(new FileReader("/Users/bahr2772/Documents/workspace/RoomieMatch/src/UserCreds.csv")))
 		{
 			String currentLine;
 			while ((currentLine = br.readLine()) != null) {

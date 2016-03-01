@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-
+<%@ page import="root.User, root.Search, java.util.ArrayList " %> 
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 
@@ -37,34 +37,58 @@
 	<%@include file="header.jsp"%>
 
 	<!-- Put your page content here! -->
-
-
-	<div id="profile">
-		<div id="profiles">
-			<div id="profileImage">
-
+	
+	<div class="main">
+			<% ArrayList<User> other = (ArrayList<User>)session.getAttribute("rankList");
+			
+			for(int i = 0; i < other.size(); i++){
 				
+			%>
+		
+					<div id="profile01">
+						<div id="profiles01">
+							<div id="profileImage01">
+					
 				<img
 					src="http://thesocialmediamonthly.com/wp-content/uploads/2015/08/photo.png"
-					class="img-circle" id="profileImage">
+					class="img-circle" id="profileImage01">
 			</div>
 			<div id="probox">
 				<div id="infotop">
 					<table>
+					<tr>
+							<td>Username:</td>
+							<td><% out.print(other.get(i).getUsername());%></td>
+						</tr>
 						<tr>
-						
-					 <%=session.getAttribute("rankList")%>
-						
 							<td>Email:</td>
-							<td>CHANGE ME</td>
+							<td><% out.print(other.get(i).getEmail());%></td>
 						</tr>
 						<tr>
 							<td>Gender:</td>
-							<td>CHANGE ME</td>
+							<td><% if(other.get(i).getGender().equals("")){
+								out.print("n/a");
+							}else if(other.get(i).getGender().equals("1")){
+								out.print("Male");
+							}else if(other.get(i).getGender().equals("2")){
+								out.print("Female");
+							}%></td>
 						</tr>
 						<tr>
 							<td>Cleanliness:</td>
-							<td>CHANGE ME</td>
+							<td><% if(other.get(i).getClean().equals("00")){
+								out.print("n/a");
+							}else if(other.get(i).getClean().equals("01")){
+								out.print("Total Slob");
+							}else if(other.get(i).getClean().equals("02")){
+								out.print("Slob");
+							}else if(other.get(i).getClean().equals("03")){
+								out.print("Normal");
+							}else if(other.get(i).getClean().equals("04")){
+								out.print("Clean");
+							}else if(other.get(i).getClean().equals("05")){
+								out.print("Clean Freak");
+							}%></td>
 						</tr>
 						<tr>
 					</table>
@@ -75,39 +99,68 @@
 						<tr>
 							<td>Prefered Gender: <br> Home Time:
 							</td>
-							<td>CHANGE ME<br> CHANGE ME
+							<td><% if(other.get(i).getPreferRmGen().equals("00")){
+								out.print("n/a");
+							}else if(other.get(i).getPreferRmGen().equals("")){
+								out.print("n/a");
+							}else if(other.get(i).getPreferRmGen().equals("01")){
+								out.print("Male(s) only");
+							}else if(other.get(i).getPreferRmGen().equals("02")){
+								out.print("Female(s) only");
+							}else if(other.get(i).getPreferRmGen().equals("03")){
+								out.print("Doesn't Matter");
+							}%>
+							<br> <% if(other.get(i).getHomeTime().equals("00")){
+								out.print("n/a");
+							}else if(other.get(i).getHomeTime().equals("01")){
+								out.print("Close to Never");
+							}else if(other.get(i).getHomeTime().equals("02")){
+								out.print("Few Hours");
+							}else if(other.get(i).getHomeTime().equals("03")){
+								out.print("Half a day");
+							}else if(other.get(i).getHomeTime().equals("04")){
+								out.print("In and Out");
+							}%>
 							</td>
 						</tr>
 						<tr>
 							<td>Home Amount:</td>
-							<td>CHANGE ME</td>
+							<td><% if(other.get(i).getHomeAmount().equals("00")){
+								out.print("n/a");
+							}else if(other.get(i).getHomeAmount().equals("01")){
+								out.print("Mornings");
+							}else if(other.get(i).getHomeAmount().equals("02")){
+								out.print("Afternoon");
+							}else if(other.get(i).getHomeAmount().equals("03")){
+								out.print("Evenings");
+							}else if(other.get(i).getHomeAmount().equals("04")){
+								out.print("Night");
+							}else if(other.get(i).getHomeAmount().equals("04")){
+								out.print("All day Long");
+							}%></td>
 
 						</tr>
 
 					</table>
 				</div>
+				<% if(other.get(i).getCounter() > 150) 
+					for(int j = 0; j < 5; i++){%>
 				<div id="score">
 					<img
 						src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2e/Stj%C3%A4rna.svg/2000px-Stj%C3%A4rna.svg.png"
 						id="scorepic">
 				</div>
-
+					<%} %>
 
 			</div>
-			<div class="profilegroup">
-
-
-				<div id=userProfile>
-					<div class="profileForm">
-						<div id="inputText"></div>
-					</div>
-				</div>
-			</div>
+		
 		</div>
 
-	</div>
-
-
+	</div></div>
+	
+			
+			<%}
+			%>
 	<!-- jQuery -->
 	<script src="js/jquery.js"></script>
 

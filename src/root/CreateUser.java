@@ -9,7 +9,7 @@ public class CreateUser {
 	public CreateUser(String username, String password, String email){
 
 	
-		File fileUser = new File("./src/UserCreds.csv");
+		File fileUser = new File("/Users/bahr2772/Documents/workspace/RoomieMatch/src/UserCreds.csv");
 
 		try{
 			
@@ -29,7 +29,7 @@ public class CreateUser {
 		}catch(IOException e){
 			e.printStackTrace();
 		}
-		File fileProfile = new File("./src/UserProfiles.csv");
+		File fileProfile = new File("/Users/bahr2772/Documents/workspace/RoomieMatch/src/UserProfiles.csv");
 
 		try{
 			
@@ -41,7 +41,7 @@ public class CreateUser {
 
 			FileWriter fileWritter = new FileWriter(fileProfile,true);
 			BufferedWriter bufferWritter = new BufferedWriter(fileWritter);
-			bufferWritter.write(username + ",name," + email + ",,,,,,,,,,,,,,null,0\n");
+			bufferWritter.write(username + ",name," + email + ",0,0,0,0,0,0,0,0,0,0,0,0,0,null,0\n");
 			bufferWritter.close();
 
 			System.out.println("User Profile Created");

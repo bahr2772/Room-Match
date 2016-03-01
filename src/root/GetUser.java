@@ -12,7 +12,7 @@ public class GetUser {
 
 	public User getProfile(User user, String username,  HttpServletRequest request){
 		
-		try (BufferedReader br = new BufferedReader(new FileReader("./src/UserProfiles.csv")))
+		try (BufferedReader br = new BufferedReader(new FileReader("/Users/bahr2772/Documents/workspace/RoomieMatch/src/UserProfiles.csv")))
 		{
 
 			String currentLine;

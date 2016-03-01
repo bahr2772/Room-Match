@@ -22,7 +22,7 @@
 				id="bs-example-navbar-collapse-1">
 				<ul class="nav navbar-nav">
 					<li><a href="index.jsp">Home</a></li>
-					<li><a href="members.jsp">Members</a></li>
+					<li><a href="<%=request.getContextPath()%>/getMembers">View Members</a></li>
 					<li><a href="search.jsp">Search</a></li>
 					<li><a href="profile.jsp">Profile</a></li>
 				</ul>

@@ -26,7 +26,7 @@ public class SearchServlet extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-	
+
 		HttpSession session = request.getSession();
 
 		Search search = new Search();
@@ -44,13 +44,14 @@ public class SearchServlet extends HttpServlet {
 		String maxRent = request.getParameter("maxRent");
 		String edu = request.getParameter("edu");
 		String videoGames = request.getParameter("video");
-		
+		search.readFile();
 		search.runSearch(name, minAge,maxAge,gender, clean, tv, loud, cook, homeTime, maxRent,edu,videoGames);
-		search.sortRanking();	
+		search.sortRanking(request);	
 		
 		session.setAttribute("test", "this is a test");
 		//search.sortRanking(request);
-		request.setAttribute("rankList", search.sortRanking());
+		//search.sortRanking());
+		//session.setAttribute("rankList", "test");
 		//session.setAttribute("rankList",nameResults);
 		//System.out.println(search.getUserList());
 		response.sendRedirect("results.jsp");

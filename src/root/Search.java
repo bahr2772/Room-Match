@@ -21,7 +21,7 @@ public class Search {
 	public List<User> readFile(){
 
 
-		String file = "./src/UserProfiles.csv";  
+		String file = "/Users/bahr2772/Documents/workspace/RoomieMatch/src/UserProfiles.csv";  
 		BufferedReader br = null;  
 		String line = "";  
 
@@ -91,8 +91,8 @@ public class Search {
 					getUserList().get(j).getUsername().contains((searchName))){
 				int counter = getUserList().get(j).getCounter();
 				getUserList().get(j).setCounter(counter + 50);
-				System.out.print("name Search "+ getUserList().get(j).getUsername());
-				System.out.println(getUserList().get(j).getCounter());
+//				System.out.print("name Search "+ getUserList().get(j).getUsername());
+//				System.out.println(getUserList().get(j).getCounter());
 
 			}
 		}
@@ -104,8 +104,8 @@ public class Search {
 			if(getUserList().get(j).getAge() > min && getUserList().get(j).getAge() < max){
 				int counter = getUserList().get(j).getCounter();
 				getUserList().get(j).setCounter(counter + 5);
-				System.out.print("age "+getUserList().get(j).getUsername());
-				System.out.println(getUserList().get(j).getCounter());
+//				System.out.print("age "+getUserList().get(j).getUsername());
+//				System.out.println(getUserList().get(j).getCounter());
 			}
 
 		}
@@ -117,8 +117,8 @@ public class Search {
 			if(getUserList().get(j).getGender().equals(gender)){
 				int counter = getUserList().get(j).getCounter();
 				getUserList().get(j).setCounter(counter + 10);
-				System.out.print("gen "+getUserList().get(j).getUsername());
-				System.out.println(getUserList().get(j).getCounter());
+//				System.out.print("gen "+getUserList().get(j).getUsername());
+//				System.out.println(getUserList().get(j).getCounter());
 
 			}
 		}
@@ -129,8 +129,8 @@ public class Search {
 			if(getUserList().get(j).getClean().equals(clean)){
 				int counter = getUserList().get(j).getCounter();
 				getUserList().get(j).setCounter(counter + 10);
-				System.out.print("clean "+getUserList().get(j).getUsername());
-				System.out.println(getUserList().get(j).getCounter());
+//				System.out.print("clean "+getUserList().get(j).getUsername());
+//				System.out.println(getUserList().get(j).getCounter());
 
 			}
 		}
@@ -141,8 +141,8 @@ public class Search {
 			if(getUserList().get(j).getLoud().equals(loud)){
 				int counter = getUserList().get(j).getCounter();
 				getUserList().get(j).setCounter(counter + 10);
-				System.out.print("loud "+getUserList().get(j).getUsername());
-				System.out.println(getUserList().get(j).getCounter());
+//				System.out.print("loud "+getUserList().get(j).getUsername());
+//				System.out.println(getUserList().get(j).getCounter());
 
 			}
 		}
@@ -153,8 +153,8 @@ public class Search {
 			if(getUserList().get(j).getTv().equals(tv)){
 				int counter = getUserList().get(j).getCounter();
 				getUserList().get(j).setCounter(counter + 10);
-				System.out.print("tv "+getUserList().get(j).getUsername());
-				System.out.println(getUserList().get(j).getCounter());
+//				System.out.print("tv "+getUserList().get(j).getUsername());
+//				System.out.println(getUserList().get(j).getCounter());
 
 			}
 		}
@@ -166,8 +166,8 @@ public class Search {
 			if(getUserList().get(j).getCook().equals(cook)){
 				int counter = getUserList().get(j).getCounter();
 				getUserList().get(j).setCounter(counter + 10);
-				System.out.print("cook "+getUserList().get(j).getUsername());
-				System.out.println(getUserList().get(j).getCounter());
+//				System.out.print("cook "+getUserList().get(j).getUsername());
+//				System.out.println(getUserList().get(j).getCounter());
 
 			}
 		}
@@ -178,8 +178,8 @@ public class Search {
 			if(getUserList().get(j).getHomeTime().equals(homeTime)){
 				int counter = getUserList().get(j).getCounter();
 				getUserList().get(j).setCounter(counter + 10);
-				System.out.print("homeTime "+getUserList().get(j).getUsername());
-				System.out.println(getUserList().get(j).getCounter());
+//				System.out.print("homeTime "+getUserList().get(j).getUsername());
+//				System.out.println(getUserList().get(j).getCounter());
 
 			}
 		}
@@ -190,8 +190,8 @@ public class Search {
 			if(getUserList().get(j).getPreferRmGen().equals(roomGen)){
 				int counter = getUserList().get(j).getCounter();
 				getUserList().get(j).setCounter(counter + 10);
-				System.out.print("roomGen "+getUserList().get(j).getUsername());
-				System.out.println(getUserList().get(j).getCounter());
+//				System.out.print("roomGen "+getUserList().get(j).getUsername());
+//				System.out.println(getUserList().get(j).getCounter());
 
 			}
 		}
@@ -202,8 +202,8 @@ public class Search {
 			if(getUserList().get(j).getGames().equals(videoGame)){
 				int counter = getUserList().get(j).getCounter();
 				getUserList().get(j).setCounter(counter + 10);
-				System.out.print("video games "+getUserList().get(j).getUsername());
-				System.out.println(getUserList().get(j).getCounter());
+//				System.out.print("video games "+getUserList().get(j).getUsername());
+//				System.out.println(getUserList().get(j).getCounter());
 
 			}
 		}
@@ -215,8 +215,8 @@ public class Search {
 			if(getUserList().get(j).getMaxNum().equals(max)){
 				int counter = getUserList().get(j).getCounter();
 				getUserList().get(j).setCounter(counter + 10);
-				System.out.print("max  "+getUserList().get(j).getUsername());
-				System.out.println(getUserList().get(j).getCounter());
+//				System.out.print("max  "+getUserList().get(j).getUsername());
+//				System.out.println(getUserList().get(j).getCounter());
 
 			}
 		}
@@ -228,8 +228,8 @@ public class Search {
 			if(getUserList().get(j).getEdu().equals(edu)){
 				int counter = getUserList().get(j).getCounter();
 				getUserList().get(j).setCounter(counter + 10);
-				System.out.print("edu "+getUserList().get(j).getUsername());
-				System.out.println(getUserList().get(j).getCounter());
+//				System.out.print("edu "+getUserList().get(j).getUsername());
+//				System.out.println(getUserList().get(j).getCounter());
 
 			}
 		}
@@ -240,8 +240,8 @@ public class Search {
 			if(getUserList().get(j).getMaxRent().equals(rent)){
 				int counter = getUserList().get(j).getCounter();
 				getUserList().get(j).setCounter(counter + 10);
-				System.out.print("roomGen "+getUserList().get(j).getUsername());
-				System.out.println(getUserList().get(j).getCounter());
+//				System.out.print("roomGen "+getUserList().get(j).getUsername());
+//				System.out.println(getUserList().get(j).getCounter());
 
 			}
 		}
@@ -270,8 +270,8 @@ public class Search {
 	}  
 	
 //	HttpServletRequest request
-	public List<User> sortRanking(){
-	//	HttpSession session = request.getSession();
+	public List<User> sortRanking(HttpServletRequest request){
+		HttpSession session = request.getSession();
 		Collections.sort(userList, new Comparator<User>() {
 	        @Override public int compare(User p1, User p2) {
 	            return p2.getCounter() - p1.getCounter(); // descending
@@ -281,10 +281,10 @@ public class Search {
 		for(int j = 0; j < getUserList().size(); j++){
 //			System.out.println(getUserList().get(j).getUsername());
 //			System.out.println(getUserList().get(j).getCounter());
-			System.out.println("size" + userList.size());
+//			System.out.println("size" + userList.size());
 		}
-			System.out.println("size1" + userList.size());
-			//session.setAttribute("rankList", userList);
+			//System.out.println("size1" + userList.size());
+			session.setAttribute("rankList", userList);
 			return userList;
 	}
 	
@@ -312,6 +312,7 @@ public class Search {
 		searchMaxRent(maxRent);
 		searchEdu(edu);
 		searchVideoGames(videoGames);
+		//sortRanking();
 	}
 	
 	

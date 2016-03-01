@@ -189,5 +189,9 @@ public class User {
 		this.games = games;
 	}
 
+	public String toString(){
+		return username +" " +email;
+	}
+	
 
 }

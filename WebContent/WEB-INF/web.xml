@@ -9,4 +9,24 @@
     <welcome-file>default.htm</welcome-file>
     <welcome-file>default.jsp</welcome-file>
   </welcome-file-list>
+  <servlet>
+    <description>getMembers</description>
+    <display-name>getMembers</display-name>
+    <servlet-name>getMembers</servlet-name>
+    <servlet-class>root.getMembers</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>getMembers</servlet-name>
+    <url-pattern>/getMembers</url-pattern>
+  </servlet-mapping>
+   <servlet>
+    <description>singleprofile</description>
+    <display-name>sileprofile</display-name>
+    <servlet-name>singleprofile</servlet-name> 
+    <servlet-class>root.singleprofile</servlet-class>
+    </servlet>
+<servlet-mapping>
+    <servlet-name>singleprofile</servlet-name>
+    <url-pattern>/singleprofile</url-pattern>
+</servlet-mapping>
 </web-app>
