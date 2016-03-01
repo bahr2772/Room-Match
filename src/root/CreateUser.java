@@ -41,7 +41,8 @@ public class CreateUser {
 
 			FileWriter fileWritter = new FileWriter(fileProfile,true);
 			BufferedWriter bufferWritter = new BufferedWriter(fileWritter);
-			bufferWritter.write(username + ",name," + email + ",0,0,0,0,0,0,0,0,0,0,0,0,0,null,0\n");
+			bufferWritter.write(username + ",name," + email + ",0,0,0,0,0,0,0,0,0,0,0,0,0,"
+					+ "http://thesocialmediamonthly.com/wp-content/uploads/2015/08/photo.png,0\n");
 			bufferWritter.close();
 
 			System.out.println("User Profile Created");

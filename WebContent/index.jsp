@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-	<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-	
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 
@@ -40,15 +40,27 @@
 		<div id=submitUser>
 			<div class="logForm">
 				<div id="logText">
-					Index page
-				<c:if test="${sessionScope.username != null }">
+
+					<c:if test="${sessionScope.username == null }">
+
+
+						<br>
+						<br>
 				
-				
-				<br><br>
+				Welcome: 
+					<br>
+					Please Log in.<br>
+						<a href="login.jsp"> Log In</a></c:if>
+					
+					<c:if test="${sessionScope.username != null }">
+						<br>
+						<br>
 				
 				Welcome: 
 					<%=session.getAttribute("username")%><br> 
-					<a href="signout.jsp" id=signout>Sign Out</a>
+					If you haven't filed out your profile please do so here.<br>
+						<a href="profile.jsp"> Profile</a> <br>
+						<a href="signout.jsp" id=signout>Sign Out</a>
 					</c:if>
 
 				</div>

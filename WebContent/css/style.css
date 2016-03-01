@@ -11,10 +11,35 @@
     float: left;
 
 }
+#profileImageSingle{
+    margin-top: 0px;
+    margin-left: -0px;
+    width: 75px;
+    float: left;
+
+}
 .main{
 	margin-top:150px;
 }
+.mainSingle{
+	margin-top:150px;
+}
 #profileImage02{
+    margin-top: 0px;
+    margin-left: -0px;
+    width: 75px;
+    float: left;
+
+}
+#profileImageSingle{
+    margin-top: 0px;
+    margin-left: -0px;
+    width: 75px;
+    float: left;
+
+}
+
+#profileImageSingle{
     margin-top: 0px;
     margin-left: -0px;
     width: 75px;
@@ -38,6 +63,11 @@
     margin-right: -50px;
 
 }
+#infotopSingle{
+    margin-top: -100;
+    margin-right: -50px;
+
+}
     td {
         text-align: center;
         font-weight: 200;
@@ -51,12 +81,20 @@
 }
 
 #scorepic{
-    z-index: auto;
 	margin-top:-75px;
-	margin-left:125px;
+	margin-left: 250px;
 	width:40px;
 }
 
+#proboxSingle{
+    margin-top: 20px;
+    
+    margin-right: auto;
+    margin-left: auto;
+    background-color: white;
+    width: 400px;
+    height: 450px;
+}
 #probox{
     margin-top: 20px;
     
@@ -70,7 +108,7 @@
     width: 200px;
 }
  #profiles01 {
-     opacity: .7;
+     opacity: .95;
      background-color: cadetblue;
         font-weight: 200;
         align-items: baseline;

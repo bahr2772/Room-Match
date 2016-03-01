@@ -1,11 +1,14 @@
 package root;
 
 import java.io.IOException;
+import java.util.ArrayList;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 /**
  * Servlet implementation class singleprofile
@@ -26,12 +29,27 @@ public class singleprofile extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-
 		String profile = request.getParameter("id");
+		HttpSession session = request.getSession();
+		
+		ArrayList<User> other = (ArrayList<User>)session.getAttribute("rankList");
+		
+		for(int i = 0; i < other.size(); i++){
+		if (profile.equalsIgnoreCase(other.get(i).getUsername())){
+			request.setAttribute("proUsername", other.get(i).getUsername());
+			request.setAttribute("proAge", other.get(i).getAge());
+			request.setAttribute("gender", other.get(i).getGender());
+		}
+		
+		}
+		Search pro = new Search();
+		pro.getUserList();
 		System.out.println(profile);
+		response.sendRedirect("singleprofile.jsp");
+
 		
 		
-		response.getWriter().append("Served at: ").append(request.getContextPath());
+		
 	}
 
 	/**

@@ -48,7 +48,7 @@ public class SearchServlet extends HttpServlet {
 		search.runSearch(name, minAge,maxAge,gender, clean, tv, loud, cook, homeTime, maxRent,edu,videoGames);
 		search.sortRanking(request);	
 		
-		session.setAttribute("test", "this is a test");
+		session.setAttribute("search", "sent");
 		//search.sortRanking(request);
 		//search.sortRanking());
 		//session.setAttribute("rankList", "test");

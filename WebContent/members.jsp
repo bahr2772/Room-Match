@@ -1,7 +1,9 @@
+
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-<%@ page import="root.User, root.Search, java.util.ArrayList " %> 
+
+<%@ page import="root.User, root.Search, java.util.ArrayList "%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 
@@ -14,7 +16,7 @@
 <meta name="description" content="">
 <meta name="author" content="">
 
-<title>Members</title>
+<title>Profile</title>
 
 <!-- Bootstrap Core CSS -->
 <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -25,58 +27,90 @@
 <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
 <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
 <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
+			        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+			        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+			    <![endif]-->
 
 </head>
 
 <body>
 
-
 	<%@include file="header.jsp"%>
 
 	<!-- Put your page content here! -->
-	
+
+
 	<div class="main">
-			<% ArrayList<User> other = (ArrayList<User>)session.getAttribute("rankList");
-			
-			for(int i = 0; i < other.size(); i++){
-				
-			%>
+		<%
+		if (session.getAttribute("search") == null || session.getAttribute("search") == "") {
+	%>
+
+		<%}else{ %>
+
+
+		<% ArrayList<User> other = (ArrayList<User>)session.getAttribute("rankList");
 		
-					<div id="profile01">
-						<div id="profiles01">
-							<div id="profileImage01">
-					
-				<img
-					src="http://thesocialmediamonthly.com/wp-content/uploads/2015/08/photo.png"
-					class="img-circle" id="profileImage01">
-			</div>
-			<div id="probox">
-				<div id="infotop">
-					<table>
-					<tr>
-							<td>Username:</td>
-							<td><% out.print(other.get(i).getUsername());%></td>
-						</tr>
-						<tr>
-							<td>Email:</td>
-							<td><% out.print(other.get(i).getEmail());%></td>
-						</tr>
-						<tr>
-							<td>Gender:</td>
-							<td><% if(other.get(i).getGender().equals("")){
+		for(int i = 0; i < other.size(); i++){
+			String username = other.get(i).getUsername();
+			String email = other.get(i).getEmail();
+			int age = other.get(i).getAge();
+			String gender = other.get(i).getGender();
+			String loud = other.get(i).getLoud();
+			String tv = other.get(i).getTv();
+			String games = other.get(i).getGames();
+			String cooking = other.get(i).getCook();
+			String homeTime =other.get(i).getHomeTime();
+			String homeAmount = other.get(i).getHomeAmount();
+			String maxNum = other.get(i).getMaxNum();
+			String edu = other.get(i).getEdu();
+			String preRmGen = other.get(i).getPreferRmGen();
+			String maxRent = other.get(i).getMaxRent();
+			String profileImg = other.get(i).getProfileImage();
+			%>
+
+
+
+		<div id="profile01">
+			<div id="profiles01">
+				<div id="profileImage01">
+
+					<% if(other.get(i).getProfileImage() != null){ %>
+					<img src="<%out.print(other.get(i).getProfileImage()); %>"
+						class="img-circle" id="profileImage01">
+					<%} %>
+
+				</div>
+				<div id="probox">
+					<div id="infotop">
+						<table>
+							<tr>
+								<td>Username:</td>
+								<td>
+									<% out.print(other.get(i).getUsername());%>
+								</td>
+							</tr>
+							<tr>
+								<td>Email:</td>
+								<td>
+									<% out.print(other.get(i).getEmail());%>
+								</td>
+							</tr>
+							
+								<td>Gender:</td>
+								<td>
+									<% if(other.get(i).getGender().equals("")){
 								out.print("n/a");
 							}else if(other.get(i).getGender().equals("1")){
 								out.print("Male");
 							}else if(other.get(i).getGender().equals("2")){
 								out.print("Female");
-							}%></td>
-						</tr>
-						<tr>
-							<td>Cleanliness:</td>
-							<td><% if(other.get(i).getClean().equals("00")){
+							}%>
+								</td>
+							</tr>
+							<tr>
+								<td>Cleanliness:</td>
+								<td>
+									<% if(other.get(i).getClean().equals("00")){
 								out.print("n/a");
 							}else if(other.get(i).getClean().equals("01")){
 								out.print("Total Slob");
@@ -88,18 +122,19 @@
 								out.print("Clean");
 							}else if(other.get(i).getClean().equals("05")){
 								out.print("Clean Freak");
-							}%></td>
-						</tr>
-						<tr>
-					</table>
-				</div>
-
-				<div id="infobottom">
-					<table>
-						<tr>
-							<td>Prefered Gender: <br> Home Time:
-							</td>
-							<td><% if(other.get(i).getPreferRmGen().equals("00")){
+							}%>
+								</td>
+							</tr>
+							<tr>
+						</table>
+					</div>
+					<div id="infobottom">
+						<table>
+							<tr>
+								<td>Prefered Gender: <br> Home Time:
+								</td>
+								<td>
+									<% if(other.get(i).getPreferRmGen().equals("00")){
 								out.print("n/a");
 							}else if(other.get(i).getPreferRmGen().equals("")){
 								out.print("n/a");
@@ -109,8 +144,7 @@
 								out.print("Female(s) only");
 							}else if(other.get(i).getPreferRmGen().equals("03")){
 								out.print("Doesn't Matter");
-							}%>
-							<br> <% if(other.get(i).getHomeTime().equals("00")){
+							}%> <br> <% if(other.get(i).getHomeTime().equals("00")){
 								out.print("n/a");
 							}else if(other.get(i).getHomeTime().equals("01")){
 								out.print("Close to Never");
@@ -121,11 +155,12 @@
 							}else if(other.get(i).getHomeTime().equals("04")){
 								out.print("In and Out");
 							}%>
-							</td>
-						</tr>
-						<tr>
-							<td>Home Amount:</td>
-							<td><% if(other.get(i).getHomeAmount().equals("00")){
+								</td>
+							</tr>
+							<tr>
+								<td>Home Amount:</td>
+								<td>
+									<% if(other.get(i).getHomeAmount().equals("00")){
 								out.print("n/a");
 							}else if(other.get(i).getHomeAmount().equals("01")){
 								out.print("Mornings");
@@ -137,30 +172,23 @@
 								out.print("Night");
 							}else if(other.get(i).getHomeAmount().equals("04")){
 								out.print("All day Long");
-							}%></td>
+							}%>
+								</td>
 
-						</tr>
+							</tr>
 
-					</table>
+						</table>
+					</div>
 				</div>
-				<% if(other.get(i).getCounter() > 150) 
-					for(int j = 0; j < 5; i++){%>
-				<div id="score">
-					<img
-						src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2e/Stj%C3%A4rna.svg/2000px-Stj%C3%A4rna.svg.png"
-						id="scorepic">
-				</div>
-					<%} %>
-
 			</div>
-		
 		</div>
 
-	</div></div>
-	
-			
-			<%}
-			%>
+
+
+		<%	} 
+			  }
+			  %>
+	</div>
 	<!-- jQuery -->
 	<script src="js/jquery.js"></script>
 

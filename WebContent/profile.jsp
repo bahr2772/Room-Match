@@ -519,10 +519,14 @@
 									</select></td>
 								</tr>
 								<tr>
+								<td>Profie Image Url</td>
+								<td><input type="text" name="profileImg" id="profileIn"
+										value="${sessionScope.proImg}"></td>
+								</tr>
 							</table>
-						</div>
+						</div><br>
 
-						<input type="file" accept="image/*" id="file"><br>
+						
 						<button type="submit" id="profileBtn" value="upload">Save
 							Profile</button>
 						<br> <br> <br>

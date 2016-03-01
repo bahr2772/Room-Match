@@ -114,9 +114,13 @@ public class Search {
 	//search gender
 	public void searchGender(String gender){
 		for(int j = 0; j < getUserList().size(); j++){
-			if(getUserList().get(j).getGender().equals(gender)){
-				int counter = getUserList().get(j).getCounter();
-				getUserList().get(j).setCounter(counter + 10);
+			int counter = getUserList().get(j).getCounter();
+			if(!getUserList().get(j).getPreferRmGen().equals(gender)){	
+				getUserList().get(j).setCounter(counter - 10);
+			}else if(getUserList().get(j).getGender().equals(gender)){
+				getUserList().get(j).setCounter(counter + 30);}
+			else if(getUserList().get(j).getGender().equals(gender) || getUserList().get(j).getPreferRmGen().equals("03")){
+					getUserList().get(j).setCounter(counter + 30);
 //				System.out.print("gen "+getUserList().get(j).getUsername());
 //				System.out.println(getUserList().get(j).getCounter());
 
@@ -126,8 +130,11 @@ public class Search {
 	//search clean
 	public void searchClean(String clean){
 		for(int j = 0; j < getUserList().size(); j++){
-			if(getUserList().get(j).getClean().equals(clean)){
-				int counter = getUserList().get(j).getCounter();
+			int counter = getUserList().get(j).getCounter();
+			if(!getUserList().get(j).getClean().equals(clean)){	
+				getUserList().get(j).setCounter(counter - 10);
+
+		}else if(getUserList().get(j).getClean().equals(clean)){
 				getUserList().get(j).setCounter(counter + 10);
 //				System.out.print("clean "+getUserList().get(j).getUsername());
 //				System.out.println(getUserList().get(j).getCounter());
@@ -189,7 +196,7 @@ public class Search {
 		for(int j = 0; j < getUserList().size(); j++){
 			if(getUserList().get(j).getPreferRmGen().equals(roomGen)){
 				int counter = getUserList().get(j).getCounter();
-				getUserList().get(j).setCounter(counter + 10);
+				getUserList().get(j).setCounter(counter + 30);
 //				System.out.print("roomGen "+getUserList().get(j).getUsername());
 //				System.out.println(getUserList().get(j).getCounter());
 
