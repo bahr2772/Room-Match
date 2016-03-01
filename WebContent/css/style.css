@@ -1,7 +1,10 @@
     body {
         background-image: url("http://www.orderofinterbeing.org/wp-content/uploads/2014/04/light-forest.jpg");
-        hieght:100%
+        height:100%;
         width:100%;
+        background-size: cover;
+         background-repeat: no-repeat;
+    background-attachment: fixed;
     }
 
 #profileImage01{
