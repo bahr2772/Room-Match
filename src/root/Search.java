@@ -92,7 +92,7 @@ public class Search {
 					getUserList().get(j).getEmail().contains((searchName)) ||
 					getUserList().get(j).getUsername().contains((searchName))){
 				int counter = getUserList().get(j).getCounter();
-				getUserList().get(j).setCounter(counter + 50);
+				getUserList().get(j).setCounter(counter + 100);
 //				System.out.print("name Search "+ getUserList().get(j).getUsername());
 //				System.out.println(getUserList().get(j).getCounter());
 
@@ -105,9 +105,11 @@ public class Search {
 		for(int j = 0; j < getUserList().size(); j++){
 			if(getUserList().get(j).getAge() > min && getUserList().get(j).getAge() < max){
 				int counter = getUserList().get(j).getCounter();
-				getUserList().get(j).setCounter(counter + 5);
-//				System.out.print("age "+getUserList().get(j).getUsername());
-//				System.out.println(getUserList().get(j).getCounter());
+				getUserList().get(j).setCounter(counter + 50);
+				System.out.println("min: "+ min + "max: " + max);
+				System.out.println(getUserList().get(j).getAge());
+				System.out.print("age "+ getUserList().get(j).getUsername());
+				System.out.println(getUserList().get(j).getCounter());
 			}
 
 		}
@@ -133,13 +135,15 @@ public class Search {
 	public void searchClean(String clean){
 		for(int j = 0; j < getUserList().size(); j++){
 			int counter = getUserList().get(j).getCounter();
-			if(!getUserList().get(j).getClean().equals(clean)){	
-				getUserList().get(j).setCounter(counter - 10);
+			if(clean == "00"){
+				getUserList().get(j).setCounter(counter + 0);
+		}else if(!getUserList().get(j).getClean().equals(clean)){	
+				getUserList().get(j).setCounter(counter);
 
 		}else if(getUserList().get(j).getClean().equals(clean)){
-				getUserList().get(j).setCounter(counter + 10);
-//				System.out.print("clean "+getUserList().get(j).getUsername());
-//				System.out.println(getUserList().get(j).getCounter());
+				getUserList().get(j).setCounter(counter + 0);
+			System.out.print("clean "+getUserList().get(j).getUsername());
+				System.out.println(getUserList().get(j).getCounter());
 
 			}
 		}
@@ -147,9 +151,13 @@ public class Search {
 	//search loud
 	public void searchloud(String loud){
 		for(int j = 0; j < getUserList().size(); j++){
-			if(getUserList().get(j).getLoud().equals(loud)){
-				int counter = getUserList().get(j).getCounter();
-				getUserList().get(j).setCounter(counter + 10);
+			int counter = getUserList().get(j).getCounter();
+		if(loud == "00"){
+			getUserList().get(j).setCounter(counter + 0);
+		}else if(!getUserList().get(j).getLoud().equals(loud)){
+			getUserList().get(j).setCounter(counter + 0);
+		}else if(getUserList().get(j).getLoud().equals(loud)){
+				getUserList().get(j).setCounter(counter + 20);
 //				System.out.print("loud "+getUserList().get(j).getUsername());
 //				System.out.println(getUserList().get(j).getCounter());
 
@@ -159,9 +167,13 @@ public class Search {
 	//search tv
 	public void searchTv(String tv){
 		for(int j = 0; j < getUserList().size(); j++){
-			if(getUserList().get(j).getTv().equals(tv)){
-				int counter = getUserList().get(j).getCounter();
-				getUserList().get(j).setCounter(counter + 10);
+			int counter = getUserList().get(j).getCounter();
+			if(tv == "00"){
+				getUserList().get(j).setCounter(counter + 0);
+			}else if(!getUserList().get(j).getTv().equals(tv)){
+				getUserList().get(j).setCounter(counter + 0);
+			}else if(getUserList().get(j).getTv().equals(tv)){
+					getUserList().get(j).setCounter(counter + 20);
 //				System.out.print("tv "+getUserList().get(j).getUsername());
 //				System.out.println(getUserList().get(j).getCounter());
 
@@ -172,9 +184,13 @@ public class Search {
 	// search cook
 	public void searchCook(String cook){
 		for(int j = 0; j < getUserList().size(); j++){
-			if(getUserList().get(j).getCook().equals(cook)){
-				int counter = getUserList().get(j).getCounter();
-				getUserList().get(j).setCounter(counter + 10);
+			int counter = getUserList().get(j).getCounter();
+			if(cook == "00"){
+				getUserList().get(j).setCounter(counter + 0);
+			}else if(!getUserList().get(j).getCook().equals(cook)){
+				getUserList().get(j).setCounter(counter + 0);
+			}else if(getUserList().get(j).getCook().equals(cook)){
+					getUserList().get(j).setCounter(counter + 20);
 //				System.out.print("cook "+getUserList().get(j).getUsername());
 //				System.out.println(getUserList().get(j).getCounter());
 
@@ -184,9 +200,13 @@ public class Search {
 	//search home time
 	public void searchHomeTime(String homeTime){
 		for(int j = 0; j < getUserList().size(); j++){
-			if(getUserList().get(j).getHomeTime().equals(homeTime)){
-				int counter = getUserList().get(j).getCounter();
-				getUserList().get(j).setCounter(counter + 10);
+			int counter = getUserList().get(j).getCounter();
+			if(homeTime == "00"){
+				getUserList().get(j).setCounter(counter + 0);
+			}else if(!getUserList().get(j).getHomeTime().equals(homeTime)){
+				getUserList().get(j).setCounter(counter - 20);
+			}else if(getUserList().get(j).getHomeTime().equals(homeTime)){
+					getUserList().get(j).setCounter(counter + 20);
 //				System.out.print("homeTime "+getUserList().get(j).getUsername());
 //				System.out.println(getUserList().get(j).getCounter());
 
@@ -196,24 +216,30 @@ public class Search {
 	// search room gen
 	public void searchRoomGen(String roomGen){
 		for(int j = 0; j < getUserList().size(); j++){
-			if(getUserList().get(j).getPreferRmGen().equals(roomGen)){
-				int counter = getUserList().get(j).getCounter();
-				getUserList().get(j).setCounter(counter + 30);
+			int counter = getUserList().get(j).getCounter();
+			if(roomGen == "00"){
+				getUserList().get(j).setCounter(counter + 0);
+			}else if(!getUserList().get(j).getPreferRmGen().equals(roomGen)){
+				getUserList().get(j).setCounter(counter + 0);
+			}else if(getUserList().get(j).getPreferRmGen().equals(roomGen)){
+					getUserList().get(j).setCounter(counter + 20);
 //				System.out.print("roomGen "+getUserList().get(j).getUsername());
 //				System.out.println(getUserList().get(j).getCounter());
-
 			}
 		}
 	}
 	//search video games
 	public void searchVideoGames(String videoGame){
 		for(int j = 0; j < getUserList().size(); j++){
-			if(getUserList().get(j).getGames().equals(videoGame)){
-				int counter = getUserList().get(j).getCounter();
-				getUserList().get(j).setCounter(counter + 10);
+			int counter = getUserList().get(j).getCounter();
+			if(videoGame == "00"){
+				getUserList().get(j).setCounter(counter + 0);
+			}else if(!getUserList().get(j).getGames().equals(videoGame)){
+				getUserList().get(j).setCounter(counter + 0);
+			}else if(getUserList().get(j).getGames().equals(videoGame)){
+					getUserList().get(j).setCounter(counter + 20);
 //				System.out.print("video games "+getUserList().get(j).getUsername());
 //				System.out.println(getUserList().get(j).getCounter());
-
 			}
 		}
 	}
@@ -221,12 +247,15 @@ public class Search {
 	//search max num of roomates
 	public void searchMaxNum(String max){
 		for(int j = 0; j < getUserList().size(); j++){
-			if(getUserList().get(j).getMaxNum().equals(max)){
-				int counter = getUserList().get(j).getCounter();
-				getUserList().get(j).setCounter(counter + 10);
+			int counter = getUserList().get(j).getCounter();
+			if(max == "00"){
+				getUserList().get(j).setCounter(counter + 0);
+			}else if(!getUserList().get(j).getMaxNum().equals(max)){
+				getUserList().get(j).setCounter(counter + 0);
+			}else if(getUserList().get(j).getMaxNum().equals(max)){
+					getUserList().get(j).setCounter(counter + 20);
 //				System.out.print("max  "+getUserList().get(j).getUsername());
 //				System.out.println(getUserList().get(j).getCounter());
-
 			}
 		}
 	}
@@ -234,27 +263,34 @@ public class Search {
 	//		search edu
 	public void searchEdu(String edu){
 		for(int j = 0; j < getUserList().size(); j++){
-			if(getUserList().get(j).getEdu().equals(edu)){
-				int counter = getUserList().get(j).getCounter();
-				getUserList().get(j).setCounter(counter + 10);
+			int counter = getUserList().get(j).getCounter();
+			if(edu == "00"){
+				getUserList().get(j).setCounter(counter + 0);
+			}else if(!getUserList().get(j).getEdu().equals(edu)){
+				getUserList().get(j).setCounter(counter + 0);
+			}else if(getUserList().get(j).getEdu().equals(edu)){
+					getUserList().get(j).setCounter(counter + 20);
 //				System.out.print("edu "+getUserList().get(j).getUsername());
 //				System.out.println(getUserList().get(j).getCounter());
-
 			}
 		}
 	}
 	// search max rent
 	public void searchMaxRent(String rent){
 		for(int j = 0; j < getUserList().size(); j++){
-			if(getUserList().get(j).getMaxRent().equals(rent)){
-				int counter = getUserList().get(j).getCounter();
-				getUserList().get(j).setCounter(counter + 10);
+			int counter = getUserList().get(j).getCounter();
+			if(rent == "00"){
+				getUserList().get(j).setCounter(counter + 0);
+			}else if(!getUserList().get(j).getMaxRent().equals(rent)){
+				getUserList().get(j).setCounter(counter + 0);
+			}else if(getUserList().get(j).getMaxRent().equals(rent)){
+					getUserList().get(j).setCounter(counter + 20);
 //				System.out.print("roomGen "+getUserList().get(j).getUsername());
 //				System.out.println(getUserList().get(j).getCounter());
-
 			}
 		}
 	}
+	
 	// print for checking
 	public void printUsers(List<User> printUsers) {  
 		for (int i = 0; i < printUsers.size(); i++) {  
@@ -278,7 +314,6 @@ public class Search {
 		}  
 	}  
 	
-//	HttpServletRequest request
 	public List<User> sortRanking(HttpServletRequest request){
 		HttpSession session = request.getSession();
 		Collections.sort(userList, new Comparator<User>() {
@@ -286,10 +321,11 @@ public class Search {
 	            return p2.getCounter() - p1.getCounter(); // descending
 	        }
 		});
+		
 		//sys out to confirm
 		for(int j = 0; j < getUserList().size(); j++){
-//			System.out.println(getUserList().get(j).getUsername());
-//			System.out.println(getUserList().get(j).getCounter());
+			System.out.println(getUserList().get(j).getUsername());
+			System.out.println(getUserList().get(j).getCounter());
 //			System.out.println("size" + userList.size());
 		}
 			//System.out.println("size1" + userList.size());
@@ -297,17 +333,7 @@ public class Search {
 			return userList;
 	}
 	
-	
-	
 
-	public String testString(HttpServletRequest request){
-		HttpSession session = request.getSession();
-		
-		String  tester = "this is a test";
-		
-			session.setAttribute("test", tester);
-			return tester; 
-	}
 	
 	public void runSearch(String name, int minAge, int maxAge, String gender, String clean, String tv, String loud, String cook, String homeTime, String maxRent, String edu, String videoGames){
 		searchName(name);

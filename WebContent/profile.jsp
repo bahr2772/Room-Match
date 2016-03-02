@@ -287,11 +287,11 @@
 									</select></td>
 								<tr>
 									<td>Gender:</td>
-									<td><input type="radio" name="gender" value="1" id=""
-										<c:if test="${sessionScope.gender =='1'}"> checked </c:if>>
-										Male <input type="radio" name="gender" value="2"
+									<td><input type="radio" name="gender" value="01" 
+										<c:if test="${sessionScope.gender =='01'}"> checked </c:if>>
+										Male <input type="radio" name="gender" value="02"
 										id="profileGender"
-										<c:if test="${sessionScope.gender =='2'}"> checked </c:if>>
+										<c:if test="${sessionScope.gender =='02'}"> checked </c:if>>
 										Female</td>
 								</tr>
 

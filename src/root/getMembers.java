@@ -71,7 +71,7 @@ public class getMembers extends HttpServlet {
 				user.setName(currentline[1]);  
 				user.setEmail(currentline[2]);  
 				int age = Integer.parseInt(currentline[3], 10);
-				user.setCounter(age);  
+				user.setAge(age);  
 				user.setGender(currentline[4]);  
 				user.setLoud(currentline[5]);  
 				user.setClean(currentline[6]);  
@@ -85,8 +85,7 @@ public class getMembers extends HttpServlet {
 				user.setEdu(currentline[14]);  
 				user.setMaxRent(currentline[15]);  
 				user.setProfileImage(currentline[16]);  
-				int count = Integer.parseInt(currentline[17], 10);
-				user.setCounter(count);  
+				
 
 				getUserList().add(user);  
 

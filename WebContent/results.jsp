@@ -51,7 +51,7 @@
 
 		<% ArrayList<User> other = (ArrayList<User>)session.getAttribute("rankList");
 			
-			for(int i = 0; i < other.size(); i++){	
+			for(int i = 0; i < 20; i++){	
 			String username = other.get(i).getUsername();
 				String email = other.get(i).getEmail();
 				
@@ -72,6 +72,8 @@
 				String maxRent = other.get(i).getMaxRent();
 				String profileImg = other.get(i).getProfileImage();
 				%>
+				
+				<% if(other.get(i).getCounter() > 20){  %>
 		<a href=<%= "singleprofile.jsp?username=" + username +"&email=" + email +"&age=" +age
 					+ "&gender=" + gender + "&loud=" +loud +  "&tv="+tv+ "&games="+games+ "&cook="+cooking
 					+"&homeTime="+homeTime+ "&homeAmount="+homeAmount+ "&clean=" +clean + "&maxNum="+maxNum+ "&edu="+edu+
@@ -109,9 +111,9 @@
 							<td>
 								<% if(other.get(i).getGender().equals("")){
 								out.print("n/a");
-							}else if(other.get(i).getGender().equals("1")){
+							}else if(other.get(i).getGender().equals("01")){
 								out.print("Male");
-							}else if(other.get(i).getGender().equals("2")){
+							}else if(other.get(i).getGender().equals("02")){
 								out.print("Female");
 							}%>
 							</td>
@@ -179,7 +181,7 @@
 								out.print("Evenings");
 							}else if(other.get(i).getHomeAmount().equals("04")){
 								out.print("Night");
-							}else if(other.get(i).getHomeAmount().equals("04")){
+							}else if(other.get(i).getHomeAmount().equals("05")){
 								out.print("All day Long");
 							}%>
 								</td>
@@ -203,7 +205,7 @@
 
 
 
-				<%	} 
+				<%	} } 
 			  }
 			  %>
 			  </a>

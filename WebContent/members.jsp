@@ -75,14 +75,13 @@
 				<div id="profiles01">
 					<div >
 
+					
+
 						<%
 							if (other.get(i).getProfileImage() != null) {
 						%>
 						<img src="<%out.print(other.get(i).getProfileImage());%>"
-							class="img-circle" id="profileImage01">
-						<%
-							}
-						%>
+							class="img-circle" id="profileImage01">		<%	} %>
 
 					</div>
 					<div id="probox">
@@ -91,38 +90,31 @@
 								<tr>
 									<td>Username:</td>
 									<td>
-										<%
-											out.print(other.get(i).getUsername());
-										%>
+										<%	out.print(other.get(i).getUsername());	%>
 									</td>
 								</tr>
 								<tr>
 									<td>Email:</td>
 									<td>
-										<%
-											out.print(other.get(i).getEmail());
-										%>
+										<% out.print(other.get(i).getEmail()); %>
 									</td>
 								</tr>
 								<tr>
 									<td>Gender:</td>
 									<td>
-										<%
-											if (other.get(i).getGender().equals("0")) {
+										<%	if (other.get(i).getGender().equals("00")) {
 													out.print("n/a");
-												} else if (other.get(i).getGender().equals("1")) {
+												} else if (other.get(i).getGender().equals("01")) {
 													out.print("Male");
-												} else if (other.get(i).getGender().equals("2")) {
+												} else if (other.get(i).getGender().equals("02")) {
 													out.print("Female");
-												}
-										%>
+												}	%>
 									</td>
 								</tr>
 								<tr>
 									<td>Cleanliness:</td>
 									<td>
-										<%
-											if (other.get(i).getClean().equals("00")) {
+										<% if (other.get(i).getClean().equals("00")) {
 													out.print("n/a");
 												} else if (other.get(i).getClean().equals("01")) {
 													out.print("Total Slob");
@@ -134,8 +126,7 @@
 													out.print("Clean");
 												} else if (other.get(i).getClean().equals("05")) {
 													out.print("Clean Freak");
-												}
-										%>
+												} %>
 									</td>
 								</tr>
 								<tr>
@@ -147,8 +138,7 @@
 									<td>Prefered Gender: <br> Home Time:
 									</td>
 									<td>
-										<%
-											if (other.get(i).getPreferRmGen().equals("00")) {
+										<% if (other.get(i).getPreferRmGen().equals("00")) {
 													out.print("n/a");
 												} else if (other.get(i).getPreferRmGen().equals("")) {
 													out.print("n/a");
@@ -158,9 +148,9 @@
 													out.print("Female(s) only");
 												} else if (other.get(i).getPreferRmGen().equals("03")) {
 													out.print("Doesn't Matter");
-												}
-																			%> <br> <%
-										 	if (other.get(i).getHomeTime().equals("00")) {
+												}	%>
+												 <br>
+												  <% if (other.get(i).getHomeTime().equals("00")) {
 										 			out.print("n/a");
 										 		} else if (other.get(i).getHomeTime().equals("01")) {
 										 			out.print("Close to Never");
@@ -170,15 +160,13 @@
 										 			out.print("Half a day");
 										 		} else if (other.get(i).getHomeTime().equals("04")) {
 										 			out.print("In and Out");
-										 		}
-										 %>
+										 		} %>
 									</td>
 								</tr>
 								<tr>
 									<td>Home Amount:</td>
 									<td>
-										<%
-											if (other.get(i).getHomeAmount().equals("00")) {
+										<% if (other.get(i).getHomeAmount().equals("00")) {
 													out.print("n/a");
 												} else if (other.get(i).getHomeAmount().equals("01")) {
 													out.print("Mornings");
@@ -190,19 +178,14 @@
 													out.print("Night");
 												} else if (other.get(i).getHomeAmount().equals("04")) {
 													out.print("All day Long");
-												}
-										%>
+												}	%>
 									</td>
-
 								</tr>
-
 							</table>
 						</div>
 					</div>
 				</div>
-			</div> <%
- 	}
- %>
+			</div> <% } %>
 
 		</a>
 	</div>

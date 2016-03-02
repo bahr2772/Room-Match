@@ -82,9 +82,9 @@
 									<%
 										if (request.getParameter("gender").equals("")) {
 											out.print("n/a");
-										} else if (request.getParameter("gender").equals("1")) {
+										} else if (request.getParameter("gender").equals("01")) {
 											out.print("Male");
-										} else if (request.getParameter("gender").equals("2")) {
+										} else if (request.getParameter("gender").equals("02")) {
 											out.print("Female");
 										}
 									%>
