@@ -42,7 +42,6 @@
 	<div class="main">
 		<%
 		if (session.getAttribute("search") == null || session.getAttribute("search") == "") {
-			response.sendRedirect("login.jsp");
 
 	%>
 
@@ -51,51 +50,75 @@
 
 		<% ArrayList<User> other = (ArrayList<User>)session.getAttribute("rankList");
 			
-			for(int i = 0; i < other.size(); i++){	%>
+			for(int i = 0; i < other.size(); i++){	
+			String username = other.get(i).getUsername();
+				String email = other.get(i).getEmail();
+				int age = other.get(i).getAge();
+				String gender = other.get(i).getGender();
+				String loud = other.get(i).getLoud();
+				String tv = other.get(i).getTv();
+				String games = other.get(i).getGames();
+				String clean = other.get(i).getClean();
+				String cooking = other.get(i).getCook();
+				String homeTime = other.get(i).getHomeTime();
+				String homeAmount = other.get(i).getHomeAmount();
+				String maxNum = other.get(i).getMaxNum();
+				String edu = other.get(i).getEdu();
+				String preRmGen = other.get(i).getPreferRmGen();
+				String maxRent = other.get(i).getMaxRent();
+				String profileImg = other.get(i).getProfileImage();
+				%>
+		<a href=<%= "singleprofile.jsp?username=" + username +"&email=" + email +"&age=" +age
+					+ "&gender=" + gender + "&loud=" +loud +  "&tv="+tv+ "&games="+games+ "&cook="+cooking
+					+"&homeTime="+homeTime+ "&homeAmount="+homeAmount+ "&clean=" +clean + "&maxNum="+maxNum+ "&edu="+edu+
+					"&maxRent="+maxRent+ "&profileImg="+profileImg%>>
+
+			
 
 
-			<div id="profile01">
-				<div id="profiles01">
-					<div id="profileImage01">
-						<% if(other.get(i).getProfileImage() != null){ %>
-						<img src="<%out.print(other.get(i).getProfileImage()); %>"
-							class="img-circle" id="profileImage01"><%} %>
+		<div id="profile01">
+			<div id="profiles01">
+				<div id="profileImage01">
+					<% if(other.get(i).getProfileImage() != null){ %>
+					<img src="<%out.print(other.get(i).getProfileImage()); %>"
+						class="img-circle" id="profileImage01">
+					<%} %>
 
-					</div>
-					<div id="probox">
-						<div id="infotop">
-							<table>
-								<tr>
-									<td>Username:</td>
-									<td>
-										<% out.print(other.get(i).getUsername());%>
-									</td>
-								</tr>
-								<tr>
-									<td>Email:</td>
-									<td>
-										<% out.print(other.get(i).getEmail());%>
-									</td>
-								</tr>
-								
-									<td>Gender:</td>
-									<td>
-										<% if(other.get(i).getGender().equals("")){
+				</div>
+				<div id="probox">
+					<div id="infotop">
+						<table>
+							<tr>
+								<td>Username:</td>
+								<td>
+									<% out.print(other.get(i).getUsername());%>
+								</td>
+							</tr>
+							<tr>
+								<td>Email:</td>
+								<td>
+									<% out.print(other.get(i).getEmail());%>
+								</td>
+							</tr>
+							<tr>
+							<td>Gender:</td>
+							<td>
+								<% if(other.get(i).getGender().equals("")){
 								out.print("n/a");
 							}else if(other.get(i).getGender().equals("1")){
 								out.print("Male");
 							}else if(other.get(i).getGender().equals("2")){
 								out.print("Female");
 							}%>
-									</td>
-								</tr>
-								<tr>
-									<td>Cleanliness:</td>
-									<td>
-										<% if(other.get(i).getClean().equals("00")){
+							</td>
+							</tr>
+							<tr>
+								<td>Cleanliness:</td>
+								<td>
+									<% if(other.get(i).getClean().equals("00")){
 								out.print("n/a");
 							}else if(other.get(i).getClean().equals("01")){
-								out.print("Total Slob");
+								out.print("");
 							}else if(other.get(i).getClean().equals("02")){
 								out.print("Slob");
 							}else if(other.get(i).getClean().equals("03")){
@@ -105,18 +128,18 @@
 							}else if(other.get(i).getClean().equals("05")){
 								out.print("Clean Freak");
 							}%>
-									</td>
-								</tr>
-								<tr>
-							</table>
-						</div>
-						<div id="infobottom">
-							<table>
-								<tr>
-									<td>Prefered Gender: <br> Home Time:
-									</td>
-									<td>
-										<% if(other.get(i).getPreferRmGen().equals("00")){
+								</td>
+							</tr>
+							<tr>
+						</table>
+					</div>
+					<div id="infobottom">
+						<table>
+							<tr>
+								<td>Prefered Gender: <br> Home Time:
+								</td>
+								<td>
+									<% if(other.get(i).getPreferRmGen().equals("00")){
 								out.print("n/a");
 							}else if(other.get(i).getPreferRmGen().equals("")){
 								out.print("n/a");
@@ -137,12 +160,12 @@
 							}else if(other.get(i).getHomeTime().equals("04")){
 								out.print("In and Out");
 							}%>
-									</td>
-								</tr>
-								<tr>
-									<td>Home Amount:</td>
-									<td>
-										<% if(other.get(i).getHomeAmount().equals("00")){
+								</td>
+							</tr>
+							<tr>
+								<td>Home Amount:</td>
+								<td>
+									<% if(other.get(i).getHomeAmount().equals("00")){
 								out.print("n/a");
 							}else if(other.get(i).getHomeAmount().equals("01")){
 								out.print("Mornings");
@@ -155,32 +178,33 @@
 							}else if(other.get(i).getHomeAmount().equals("04")){
 								out.print("All day Long");
 							}%>
-									</td>
+								</td>
 
-								</tr>
+							</tr>
 
-							</table>
-						</div>
+						</table>
 					</div>
-			
-		
-		<% if(other.get(i).getCounter() < 100) { %>
-
-		<div id="score">
-			<img
-				src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2e/Stj%C3%A4rna.svg/2000px-Stj%C3%A4rna.svg.png"
-				id="scorepic">
-		</div>
-		<%} %>
+				</div>
 
 
+				<% if(other.get(i).getCounter() < 100) { %>
+
+				<div id="score">
+					<img
+						src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2e/Stj%C3%A4rna.svg/2000px-Stj%C3%A4rna.svg.png"
+						id="scorepic">
+				</div>
+				<%} %>
 
 
-		<%	} 
+
+
+				<%	} 
 			  }
 			  %>
-			  	</div>
+			  </a>
 			</div>
+		</div>
 	</div>
 	<!-- jQuery -->
 	<script src="js/jquery.js"></script>

@@ -1,509 +1,502 @@
-    body {
-        background-image: url("http://www.orderofinterbeing.org/wp-content/uploads/2014/04/light-forest.jpg");
-        height:100%;
-        width:100%;
-        background-size: cover;
-         background-repeat: no-repeat;
-    background-attachment: fixed;
-    }
-
-#profileImage01{
-    margin-top: 0px;
-    margin-left: -0px;
-    width: 75px;
-    float: left;
-
-}
-#profileImageSingle{
-    margin-top: 0px;
-    margin-left: -0px;
-    width: 75px;
-    float: left;
-
-}
-.main{
-	margin-top:150px;
-}
-.mainSingle{
-	margin-top:150px;
-}
-#profileImage02{
-    margin-top: 0px;
-    margin-left: -0px;
-    width: 75px;
-    float: left;
-
-}
-#profileImageSingle{
-    margin-top: 0px;
-    margin-left: -0px;
-    width: 75px;
-    float: left;
-
+body {
+	background-image:
+		url("http://www.orderofinterbeing.org/wp-content/uploads/2014/04/light-forest.jpg");
+	height: 100%;
+	width: 100%;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
 }
 
-#profileImageSingle{
-    margin-top: 0px;
-    margin-left: -0px;
-    width: 75px;
-    float: left;
-
-}
-#age{
-	width:300px;
-	margin-top:5px;
-}
-#infobottom{
-    width: auto;
-    height: 100px;
-    margin-left: 10px;
-    padding-right: 10px;
-    margin-top: 0px;
-
-}
-#infotop{
-    margin-top: -100;
-    margin-right: -50px;
-
-}
-#infotopSingle{
-    margin-top: -100;
-    margin-right: -50px;
-
-}
-    td {
-        text-align: center;
-        font-weight: 200;
-        height: 40px;
-        align-content: center;
-        line-height: 30px;
-    }
-#profile01{
-	margin-top:10px;
-
+#profileImage01 {
+	margin-top: 0px;
+	margin-left: -0px;
+	width: 75px;
+	float: left;
 }
 
-#scorepic{
-	margin-top:-75px;
+.main {
+	margin-top: 150px;
+}
+
+.mainSingle {
+	margin-top: 150px;
+}
+
+#profileImage02 {
+	margin-top: 0px;
+	margin-left: -0px;
+	width: 75px;
+	float: left;
+}
+
+#age {
+	width: 300px;
+	margin-top: 5px;
+}
+
+#infobottom {
+	width: auto;
+	height: 100px;
+	margin-left: 10px;
+	padding-right: 10px;
+	margin-top: 0px;
+}
+
+#infotop {
+	margin-top: -100;
+	margin-right: -50px;
+}
+
+td {
+	text-align: center;
+	font-weight: 200;
+	height: 40px;
+	align-content: center;
+	line-height: 30px;
+}
+
+#profile01 {
+	margin-top: 10px;
+}
+
+#scorepic {
+	margin-top: -75px;
 	margin-left: 250px;
-	width:40px;
+	width: 40px;
 }
 
-#proboxSingle{
-    margin-top: 20px;
-    
-    margin-right: auto;
-    margin-left: auto;
-    background-color: white;
-    width: 400px;
-    height: 450px;
+#profilesSingle {
+	opacity: .85;
+	background-color: cadetblue;
+	font-weight: 200;
+	align-items: baseline;
+	line-height: 30px;
+	text-emphasis: strong;
+	text-decoration-style: solid;
+	text-align: center;
+	width: 500px;;
+	height: 730px;
+	border-radius: 5px;
+	margin-top: 15px;
+	padding-top: 1px;
+	margin-left: auto;
+	margin-right: auto;
 }
-#probox{
-    margin-top: 20px;
-    
-    margin-right: auto;
-    margin-left: auto;
-    background-color: white;
-    width: 400px;
-    height: 270px;
+
+#infotopSingle {
+	float: right;
+	width: 250px;
+	margin-right: 0px;
+	font-size: 1.4em;
+	font-family: serif;
+	align-text: right;
+	padding-left: 15px;
 }
-#nameSearch{
-    width: 200px;
+.container{
+	postion:fixed;
 }
- #profiles01 {
-     opacity: .95;
-     background-color: cadetblue;
-        font-weight: 200;
-        align-items: baseline;
-        line-height: 30px;
-        text-emphasis: strong;
-        text-decoration-style: solid;
-        text-align: center;
-        width: 420px;
-        height: 300px;
-        border-radius: 5px;
-        margin-top: 15px;
-        padding-top: 1px;
-        margin-left: auto;
-        margin-right: auto;
-    }
-    #profiles02 {
-     opacity: .7;
-     background-color: cadetblue;
-        font-weight: 200;
-        align-items: baseline;
-        line-height: 30px;
-        text-emphasis: strong;
-        text-decoration-style: solid;
-        text-align: center;
-        width: 420px;
-        height: 300px;
-        border-radius: 5px;
-        margin-top: 10px;
-        padding-top: 1px;
-        margin-left: auto;
-        margin-right: auto;
-    }
-    #profileText {
-        font-weight: 200;
-        align-items: baseline;
-        line-height: 30px;
-        background-color: rgba(520, 520, 520, 1);
-        text-emphasis: strong;
-        text-decoration-style: solid;
-        text-align: center;
-        width: 650px;
-        height: 750;
-        border-radius: 5px;
-        margin-top: 20px;
-        padding-top: 20px;
-        margin-left: auto;
-        margin-right: auto;
-    }
-#ageSelc{
-    width: 200px;
+
+#infobottomSingle {
+	height: 550px;
+	float:left;
+	width:400px;
+	margin-top: 10px;
+	margin-left: 10px;
+	font-size: 1.4em;
+	font-family: serif;
+	align-content: center;
+	
+	
 }
-    
-    #month,
-    #day,
-    #year {
-        width: 105px;
-        margin-top: 10px;
-        margin-left: 10px;
-        margin-right: auto;
-    }
-    
-    #profileBtn {
-        width: 300px;
-        background-color: orange;
-        font-size: 15px;
-        font-weight: 300;
-        border-radius: 30px;
-        height: 50px;
-    }
-    
-    #profileIn {
-        width: 290px;
-        padding-left: 10px;
-        border-radius: 150px;
-        margin-top: 10px;
-        margin-left: 10px;
-    }
-    
-    #profileTable {
-        line-height: 20px;
-        height: auto;
-        margin-left: auto;
-        margin-right: auto;
-        width: 500px;
-    }
-    
-    #profileLoud {
-        margin-left: 10px;
-        width: 300px;
-        ;
-    }
-    
-    #profileGender {
-        margin-top: 5px;
-        margin-left: 50px;
-        margin-right: 0px;
-        padding-left: 50px;
-        padding-right: 50px;
-    }
-    
-  
-    
-    .profileForm {
-       
-        opacity: .85;
-        width: 700px;
-        height: 900px;
-        margin-left: auto;
-        margin-right: auto;
-        margin-top: 200px;
-        border-radius: 5px;
-  
-    } 
-    
-  .profileGroup {
-       
-        margin-top: 400px;
-        height: 800px;
-       
-    }
-    
-    
-    .inputgroup1 {
-       
-        margin-top: 300px;
-       
-    }
-    
-    .logBtn {
-        font-size: 20px;
-        width: 100%;
-        align-content: center;
-        margin-right: auto;
-        margin-top: 30px;
-        background-color: cadetblue;
-    }
-    
-    #reg {
-        padding-top: 15px;
-        width: 400px;
-        text-align: center;
-        margin-left: auto;
-        margin-right: auto;
-    }
-    
-    .logForm {
-        background-color: ;
-        opacity: .85;
-        float: none;
-        width: 400px;
-        height: 300px;
-        margin-left: auto;
-        margin-right: auto;
-        margin-top: 100px;
-        border-radius: 5px;
-  
-    }
-    
-    #inputText {
-        margin-top: 20px;
-    }
-    
-    #usernameIn,
-    #passIn {
-        box-shadow: 3px 3px 5px #3d3d3d;
-        margin-top: 4px;
-    }
-    
-    #logText {
-        line-height: 30px;
-        background-color: azure;
-        text-emphasis: strong;
-        text-decoration-style: solid;
-        text-align: center;
-        width: 350px;
-        height: 370px;
-        border-radius: 2px;
-        margin-top: 12px;
-        padding-top: 10px;
-        margin-left: auto;
-        margin-right: auto;
-    }
-    
-    #regNameIn,
-    #regEmailin,
-    #regPass1In,
-    #regPass2In {
-        float: none;
-        margin-left: 10px;
-        box-shadow: 2px 4px grey;
-        text-align: center;
-    }
-    
-    #regText {
-        background-color: azure;
-        text-emphasis: strong;
-        text-decoration-style: solid;
-        text-align: center;
-        width: 350px;
-        border-radius: 2px;
-        margin-top: 13px;
-        padding-top: 8px;
-        margin-left: auto;
-        margin-right: auto;
-    }
-    
-    #regBtn {
-        font-size: 20px;
-        width: 100%;
-        align-content: center;
-        margin-right: auto;
-        margin-top: 15px;
-        background-color: cadetblue;
-    }
-    
-    .regForm {
-        background-color: brown;
-        opacity: .85;
-        float: none;
-        width: 400px;
-        height: 325px;
-        margin-left: auto;
-        margin-right: auto;
-        margin-top: 200px;
-        border-radius: 5px;
-        box-shadow: 15px 15px 10px black;
-        border-style: solid;
-        border-width: 1px;
-    }
-    
-    #topForm {
-        float: inherit;
-        padding: 10px;
-        width: 400px;
-        margin-left: auto;
-        margin-right: auto;
-    }
-    
-    #passfail {
-        color: red;
-    }
-    
-    #loginbutton {
-        margin-right: 10px;
-    }
-    
-    #foot {
-        float: left;
-    }
-    
-    #register {
-        margin-top: 110px;
-        margin-left: auto;
-        margin-right: auto;
-        margin-bottom: 50px;
-    }
-    
-    .container {
-        width: 80%;
-        height: auto;
-    }
-    
-    .row {
-        height: 500px;
-        margin-top: 100px;
-    }
-    
-    #saveButton {
-        color: black;
-        box-shadow: 3px 3px #d3d3d3;
-        border-radius: 4px;
-        background-color: coral;
-        width: 150px;
-    }
-    
-    #interests {
-        text-align: left;
-        width: 75%;
-    }
-    
-    #file {
-        margin-left: 250px;
-        margin-right: auto;
-    }
-    
-    #bottomForm {
-        width: auto;
-        margin-left: auto;
-        margin-right: auto;
-    }
-    
-    .signupForm {
-        text-align: center;
-        margin-bottom: 5px;
-        margin-top: 5px;
-        border-radius: 3px;
-        box-shadow: 5px 3px #d3d3d3;
-        padding: 5px;
-        width: 220px;
-    }
-    
-    h1 {
-        margin-top: 20xp;
-        padding-top: 20px;
-        color: blue;
-        font-family: cursive;
-        font-size: 8em;
-    }
-    
-    .navbar {
-        opacity: .85;
-        float: left;
-        height: 100px;
-    }
-    
-    .navbar-header {
-        opacity: .85;
-    }
-    
-    .navbar-brand {
-        float: left;
-        margin-top: 10px;
-        color: white;
-    }
-    
-    .nav {
-        font-family: cursive;
-        font-size: 1.5em;
-        float: left;
-        margin-top: 15px;
-        margin-left: 30px;
-    }
-    
-    .inputgroup {
-        margin-top: 8px;
-        margin-right: -50px;
-        float: right;
-    }
-    
-    #fail {
-        margin-top: 10px;
-        font-size: 12px;
-        color: red;
-    }
-    
-    .input-group-sm {
-        float: left;
-        margin-right: -40px;
-        width: 160px;
-    }
-    
-    .btn-login {
-        background-color: cadetblue;
-        margin-top: 10px;
-        float: right;
-    }
-    
-    .userLogin {
-        text-align: center;
-        color: white;
-        font-size: 1.4em;
-        font-family: monospace;
-        color: white;
-    }
-    
-    #test .navbar-brand {
-        font-size: 5em;
-    }
-    
-    #leftfooter {
-        margin-top: auto;
-        margin-bottom: auto;
-        background-color: #c9fb8d;
-        text-align: center;
-        float: left;
-        height: 150px;
-        width: 33.333%;
-    }
-    
-    #centerfooter {
-        background-color: #d0b4fb;
-        text-align: center;
-        float: left;
-        height: 150px;
-        width: 33.333%;
-    }
-    
-    #rightfooter {
-        background-color: #acd2fb;
-        text-align: center;
-        float: left;
-        height: 150px;
-        width: 33.333%;
-        text-align: center;
-    }
+
+#profileImageSingle {
+	z-index: auto;
+	margin-top: -30px;
+	margin-left: -33px;
+	width: 250px;
+	height: auto;
+	float: left;
+	background-color: red;
+	margin-top: -40px;
+}
+
+#proboxSingle {
+	margin-top: 20px;
+	margin-right: auto;
+	margin-left: auto;
+	background-color: white;
+	width: 450px;
+	height: 650px;
+}
+
+#probox {
+	margin-top: 20px;
+	margin-right: auto;
+	margin-left: auto;
+	background-color: white;
+	width: 400px;
+	height: 270px;
+}
+
+#nameSearch {
+	width: 200px;
+}
+
+#profiles01 {
+	opacity: .95;
+	background-color: cadetblue;
+	font-weight: 200;
+	align-items: baseline;
+	line-height: 30px;
+	text-emphasis: strong;
+	text-decoration-style: solid;
+	text-align: center;
+	width: 420px;
+	height: 300px;
+	border-radius: 5px;
+	margin-top: 15px;
+	padding-top: 1px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#profiles02 {
+	opacity: .7;
+	background-color: cadetblue;
+	font-weight: 200;
+	align-items: baseline;
+	line-height: 30px;
+	text-emphasis: strong;
+	text-decoration-style: solid;
+	text-align: center;
+	width: 420px;
+	height: 300px;
+	border-radius: 5px;
+	margin-top: 10px;
+	padding-top: 1px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#profileText {
+	font-weight: 200;
+	align-items: baseline;
+	line-height: 30px;
+	background-color: rgba(520, 520, 520, 1);
+	text-emphasis: strong;
+	text-decoration-style: solid;
+	text-align: center;
+	width: 650px;
+	height: 750;
+	border-radius: 5px;
+	margin-top: 20px;
+	padding-top: 20px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#ageSelc {
+	width: 200px;
+}
+
+#month, #day, #year {
+	width: 105px;
+	margin-top: 10px;
+	margin-left: 10px;
+	margin-right: auto;
+}
+
+#profileBtn {
+	width: 300px;
+	background-color: orange;
+	font-size: 15px;
+	font-weight: 300;
+	border-radius: 30px;
+	height: 50px;
+}
+
+#profileIn {
+	width: 290px;
+	padding-left: 10px;
+	border-radius: 150px;
+	margin-top: 10px;
+	margin-left: 10px;
+}
+
+#profileTable {
+	line-height: 20px;
+	height: auto;
+	margin-left: auto;
+	margin-right: auto;
+	width: 500px;
+}
+
+#profileLoud {
+	margin-left: 10px;
+	width: 300px;
+	;
+}
+
+#profileGender {
+	margin-top: 5px;
+	margin-left: 50px;
+	margin-right: 0px;
+	padding-left: 50px;
+	padding-right: 50px;
+}
+
+.profileForm {
+	opacity: .85;
+	width: 700px;
+	height: 900px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 200px;
+	border-radius: 5px;
+}
+
+.profileGroup {
+	margin-top: 400px;
+	height: 800px;
+}
+
+.inputgroup1 {
+	margin-top: 300px;
+}
+
+.logBtn {
+	font-size: 20px;
+	width: 100%;
+	align-content: center;
+	margin-right: auto;
+	margin-top: 30px;
+	background-color: cadetblue;
+}
+
+#reg {
+	padding-top: 15px;
+	width: 400px;
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.logForm {
+	background-color:;
+	opacity: .85;
+	float: none;
+	width: 400px;
+	height: 300px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 100px;
+	border-radius: 5px;
+}
+
+#inputText {
+	margin-top: 20px;
+}
+
+#usernameIn, #passIn {
+	box-shadow: 3px 3px 5px #3d3d3d;
+	margin-top: 4px;
+}
+
+#logText {
+	line-height: 30px;
+	background-color: azure;
+	text-emphasis: strong;
+	text-decoration-style: solid;
+	text-align: center;
+	width: 350px;
+	height: 370px;
+	border-radius: 2px;
+	margin-top: 12px;
+	padding-top: 10px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#regNameIn, #regEmailin, #regPass1In, #regPass2In {
+	float: none;
+	margin-left: 10px;
+	box-shadow: 2px 4px grey;
+	text-align: center;
+}
+
+#regText {
+	background-color: azure;
+	text-emphasis: strong;
+	text-decoration-style: solid;
+	text-align: center;
+	width: 350px;
+	border-radius: 2px;
+	margin-top: 13px;
+	padding-top: 8px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#regBtn {
+	font-size: 20px;
+	width: 100%;
+	align-content: center;
+	margin-right: auto;
+	margin-top: 15px;
+	background-color: cadetblue;
+}
+
+.regForm {
+	background-color: brown;
+	opacity: .85;
+	float: none;
+	width: 400px;
+	height: 325px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 200px;
+	border-radius: 5px;
+	box-shadow: 15px 15px 10px black;
+	border-style: solid;
+	border-width: 1px;
+}
+
+#topForm {
+	float: inherit;
+	padding: 10px;
+	width: 400px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#passfail {
+	color: red;
+}
+
+#loginbutton {
+	margin-right: 10px;
+}
+
+#foot {
+	float: left;
+}
+
+#register {
+	margin-top: 110px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 50px;
+}
+
+.container {
+	width: 80%;
+	height: auto;
+}
+
+.row {
+	height: 500px;
+	margin-top: 100px;
+}
+
+#saveButton {
+	color: black;
+	box-shadow: 3px 3px #d3d3d3;
+	border-radius: 4px;
+	background-color: coral;
+	width: 150px;
+}
+
+#interests {
+	text-align: left;
+	width: 75%;
+}
+
+#file {
+	margin-left: 250px;
+	margin-right: auto;
+}
+
+#bottomForm {
+	width: auto;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.signupForm {
+	text-align: center;
+	margin-bottom: 5px;
+	margin-top: 5px;
+	border-radius: 3px;
+	box-shadow: 5px 3px #d3d3d3;
+	padding: 5px;
+	width: 220px;
+}
+
+h1 {
+	margin-top: 20xp;
+	padding-top: 20px;
+	color: blue;
+	font-family: cursive;
+	font-size: 8em;
+}
+
+.navbar {
+	opacity: .85;
+	float: left;
+	height: 100px;
+}
+
+.navbar-header {
+	opacity: .85;
+}
+
+.navbar-brand {
+	float: left;
+	margin-top: 10px;
+	color: white;
+}
+
+.nav {
+	font-family: cursive;
+	font-size: 1.5em;
+	float: left;
+	margin-top: 15px;
+	margin-left: 30px;
+}
+
+.inputgroup {
+	margin-top: 8px;
+	margin-right: -50px;
+	float: right;
+}
+
+#fail {
+	margin-top: 10px;
+	font-size: 12px;
+	color: red;
+}
+
+.input-group-sm {
+	float: left;
+	margin-right: -40px;
+	width: 160px;
+}
+
+.btn-login {
+	background-color: cadetblue;
+	margin-top: 10px;
+	float: right;
+}
+
+.userLogin {
+	text-align: center;
+	color: white;
+	font-size: 1.4em;
+	font-family: monospace;
+	color: white;
+}
+
+#test .navbar-brand {
+	font-size: 5em;
+}
