@@ -9,9 +9,10 @@ body {
 }
 
 #profileImage01 {
-	margin-top: 0px;
-	margin-left: -0px;
-	width: 75px;
+	background-color:#aab5ac;
+	margin-top: -5px;
+	margin-left: -11px;
+	width: 150px;
 	float: left;
 }
 
@@ -34,11 +35,12 @@ body {
 	width: 300px;
 	margin-top: 5px;
 }
-
+tr:nth-child(even) {background-color: #f2f2f2}
 #infobottom {
+	
 	width: auto;
 	height: 100px;
-	margin-left: 10px;
+	margin-left: 100px;
 	padding-right: 10px;
 	margin-top: 0px;
 }
@@ -67,16 +69,16 @@ td {
 }
 
 #profilesSingle {
-	opacity: .85;
-	background-color: cadetblue;
+	opacity: .9;
+background-image:url("http://www.signaturehardwoodfloors.com/blog/wp-content/uploads/water-and-vinegar-wood-floor.jpg");
 	font-weight: 200;
 	align-items: baseline;
 	line-height: 30px;
 	text-emphasis: strong;
 	text-decoration-style: solid;
 	text-align: center;
-	width: 500px;;
-	height: 730px;
+	width: 550px;;
+	height: 700px;
 	border-radius: 5px;
 	margin-top: 15px;
 	padding-top: 1px;
@@ -87,27 +89,50 @@ td {
 #infotopSingle {
 	float: right;
 	width: 250px;
-	margin-right: 0px;
+	margin-right: 50px;
 	font-size: 1.4em;
 	font-family: serif;
 	align-text: right;
 	padding-left: 15px;
 }
-.container{
-	postion:fixed;
+
+.container {
+	postion: fixed;
 }
 
+.navbar-collapse {
+	text-color: black;
+	opaticy: .9;
+}
+
+a:hover {
+	text-color: red;
+}
+
+hr {
+	width: 240px;
+	display: block;
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+	margin-left: -100px;
+	margin-right: auto;
+	border-style: inset;
+	border-width: 1px;
+}
+.singleprofile{
+border-bottom: 3px;	
+
+}
+tr.signleprofile:nth-child(even) {background-color: #f2f2f2}
 #infobottomSingle {
 	height: 550px;
-	float:left;
-	width:400px;
+	float: left;
+	width: 400px;
 	margin-top: 10px;
-	margin-left: 10px;
+	margin-left: 50px;
 	font-size: 1.4em;
 	font-family: serif;
 	align-content: center;
-	
-	
 }
 
 #profileImageSingle {
@@ -126,7 +151,7 @@ td {
 	margin-right: auto;
 	margin-left: auto;
 	background-color: white;
-	width: 450px;
+	width: 520px;
 	height: 650px;
 }
 
@@ -134,7 +159,7 @@ td {
 	margin-top: 20px;
 	margin-right: auto;
 	margin-left: auto;
-	background-color: white;
+	background-color: rgb( 255,255,255);
 	width: 400px;
 	height: 270px;
 }
@@ -145,7 +170,7 @@ td {
 
 #profiles01 {
 	opacity: .95;
-	background-color: cadetblue;
+background-image:url("http://www.signaturehardwoodfloors.com/blog/wp-content/uploads/water-and-vinegar-wood-floor.jpg");
 	font-weight: 200;
 	align-items: baseline;
 	line-height: 30px;
@@ -163,7 +188,7 @@ td {
 
 #profiles02 {
 	opacity: .7;
-	background-color: cadetblue;
+background-image:url("http://www.signaturehardwoodfloors.com/blog/wp-content/uploads/water-and-vinegar-wood-floor.jpg");
 	font-weight: 200;
 	align-items: baseline;
 	line-height: 30px;

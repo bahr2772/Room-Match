@@ -40,8 +40,9 @@
 	<!-- Put your page content here! -->
 
 	<div class="main">
-		<%
-		if (session.getAttribute("search") == null || session.getAttribute("search") == "") {
+		<%        session.removeAttribute("user");
+ %>
+		<% if (session.getAttribute("search") == null || session.getAttribute("search") == "") {
 
 	%>
 
@@ -53,7 +54,10 @@
 			for(int i = 0; i < other.size(); i++){	
 			String username = other.get(i).getUsername();
 				String email = other.get(i).getEmail();
-				int age = other.get(i).getAge();
+				
+				int temp = other.get(i).getAge();
+				String age = Integer.toString(temp);
+				System.out.print(age);
 				String gender = other.get(i).getGender();
 				String loud = other.get(i).getLoud();
 				String tv = other.get(i).getTv();
@@ -78,7 +82,7 @@
 
 		<div id="profile01">
 			<div id="profiles01">
-				<div id="profileImage01">
+				<div >
 					<% if(other.get(i).getProfileImage() != null){ %>
 					<img src="<%out.print(other.get(i).getProfileImage()); %>"
 						class="img-circle" id="profileImage01">

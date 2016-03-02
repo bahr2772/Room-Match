@@ -19,24 +19,24 @@ import javax.servlet.http.HttpSession;
 //@WebServlet("/getMembers")
 public class getMembers extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-       
-    /**
-     * @see HttpServlet#HttpServlet()
-     */
-    public getMembers() {
-        super();
-        // TODO Auto-generated constructor stub
-    }
+
+	/**
+	 * @see HttpServlet#HttpServlet()
+	 */
+	public getMembers() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
 
 	/**
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		
+
 		readFile(request);
 		response.sendRedirect("members.jsp");
-		
-		
+
+
 	}
 
 	/**
@@ -47,83 +47,76 @@ public class getMembers extends HttpServlet {
 		doGet(request, response);
 	}
 
-private	List<User> userList = new ArrayList<User>();  
-private User counter;
+	private	List<User> memberList = new ArrayList<User>();  
+	
 
 
-public List<User> readFile(HttpServletRequest request){
-	HttpSession session = request.getSession();
+	public List<User> readFile(HttpServletRequest request){
+		HttpSession session = request.getSession();
 
-	String file = "/Users/bahr2772/Documents/workspace/RoomieMatch/src/UserProfiles.csv";  
-	BufferedReader br = null;  
-	String line = "";  
+		String file = "/Users/bahr2772/Documents/workspace/RoomieMatch/src/UserProfiles.csv";  
+		BufferedReader br = null;  
+		String line = "";  
 
-	try {  
-		br = new BufferedReader(new FileReader(file));  
-		while ((line = br.readLine()) != null) {  
+		try {  
+			br = new BufferedReader(new FileReader(file));  
+			while ((line = br.readLine()) != null) {  
 
-			String[] currentline = line.split(",");  
+				String[] currentline = line.split(",");  
 
-			User user = new User();  
+				User user = new User();  
 
-			// set values to user
-			user.setUsername((currentline[0]));  
-			user.setName(currentline[1]);  
-			user.setEmail(currentline[2]);  
-			int age = Integer.parseInt(currentline[3], 10);
-			user.setCounter(age);  
-			user.setGender(currentline[4]);  
-			user.setLoud(currentline[5]);  
-			user.setClean(currentline[6]);  
-			user.setTv(currentline[7]);  
-			user.setGames(currentline[8]);  
-			user.setCook(currentline[9]);  
-			user.setHomeTime(currentline[10]);  
-			user.setHomeAmount(currentline[11]);  
-			user.setPreferRmGen(currentline[12]);  
-			user.setMaxNum(currentline[13]);  
-			user.setEdu(currentline[14]);  
-			user.setMaxRent(currentline[15]);  
-			user.setProfileImage(currentline[16]);  
-			int count = Integer.parseInt(currentline[17], 10);
-			user.setCounter(count);  
+				// set values to user
+				user.setUsername((currentline[0]));  
+				user.setName(currentline[1]);  
+				user.setEmail(currentline[2]);  
+				int age = Integer.parseInt(currentline[3], 10);
+				user.setCounter(age);  
+				user.setGender(currentline[4]);  
+				user.setLoud(currentline[5]);  
+				user.setClean(currentline[6]);  
+				user.setTv(currentline[7]);  
+				user.setGames(currentline[8]);  
+				user.setCook(currentline[9]);  
+				user.setHomeTime(currentline[10]);  
+				user.setHomeAmount(currentline[11]);  
+				user.setPreferRmGen(currentline[12]);  
+				user.setMaxNum(currentline[13]);  
+				user.setEdu(currentline[14]);  
+				user.setMaxRent(currentline[15]);  
+				user.setProfileImage(currentline[16]);  
+				int count = Integer.parseInt(currentline[17], 10);
+				user.setCounter(count);  
 
-			getUserList().add(user);  
+				getUserList().add(user);  
 
-		}  
-		// print to console
-		//	printUsers(getUserList());  
-
-	} catch (FileNotFoundException e) {  
-		e.printStackTrace();  
-	} catch (IOException e) {  
-		e.printStackTrace();  
-	} finally {  
-		if (br != null) {  
-			try {  
-				br.close();  
-			} catch (IOException e) {  
-				e.printStackTrace();  
 			}  
-		}  
-	} 
-	session.setAttribute("userList", userList);
-	return getUserList();
-}
+			// print to console
+			//	printUsers(getUserList());  
 
-public List<User> getUserList() {
-	return userList;
-}
+		} catch (FileNotFoundException e) {  
+			e.printStackTrace();  
+		} catch (IOException e) {  
+			e.printStackTrace();  
+		} finally {  
+			if (br != null) {  
+				try {  
+					br.close();  
+				} catch (IOException e) {  
+					e.printStackTrace();  
+				}  
+			}  
+		} 
+		session.setAttribute("memberList", memberList);
+		return memberList;
+	}
 
-public void setUserList(List<User> userList) {
-	this.userList = userList;
-}
+	public List<User> getUserList() {
+		return memberList;
+	}
 
-public User getCounter() {
-	return counter;
-}
+	public void setUserList(List<User> userList) {
+		this.memberList = userList;
+	}
 
-public void setCounter(User counter) {
-	this.counter = counter;
-}  
 }

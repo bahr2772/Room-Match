@@ -34,7 +34,8 @@
 </head>
 
 <body>
-
+<%        session.removeAttribute("user");
+ %>
 	<%@include file="header.jsp"%>
 
 	<!-- Put your page content here! -->
@@ -50,7 +51,7 @@
 				</div>
 				<div id="proboxSingle">
 					<div id="infotopSingle">
-						<table>
+						<table class="signleprofile">
 							<tr>
 								<td>Username:</td>
 								<td>
@@ -62,12 +63,11 @@
 							<tr>
 								<td>Email:</td>
 								<td>
-									<%
-										out.print(request.getParameter("email"));
-									%>
+									<a href="mailto:<%out.print(request.getParameter("email"));%>">
+									<%out.print(request.getParameter("email")); %></a>
 								</td>
 							</tr>
-							<tr>
+							
 							<tr>
 								<td>Age:</td>
 								<td>
@@ -91,9 +91,10 @@
 								</td>
 							</tr>
 						</table>
+						<hr>
 					</div>
 					<div id="infobottomSingle">
-						<table>
+						<table class="singleprofile">
 							<tr>
 								<td>Cleanliness:</td>
 								<td colspan="1">

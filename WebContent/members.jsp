@@ -1,9 +1,8 @@
 
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"	pageEncoding="UTF-8"%>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-
 <%@ page import="root.User, root.Search, java.util.ArrayList "%>
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 
@@ -16,7 +15,7 @@
 <meta name="description" content="">
 <meta name="author" content="">
 
-<title>Profile</title>
+<title>Members</title>
 
 <!-- Bootstrap Core CSS -->
 <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -34,7 +33,7 @@
 </head>
 
 <body>
-
+<%  session.removeAttribute("user"); %>
 	<%@include file="header.jsp"%>
 
 	<!-- Put your page content here! -->
@@ -42,13 +41,15 @@
 
 	<div class="main">
 
-		<%
-			ArrayList<User> other = (ArrayList<User>) session.getAttribute("rankList");
+		<% session.removeAttribute("search");
+	
+			ArrayList<User> other = (ArrayList<User>) session.getAttribute("memberList");
 
 			for (int i = 0; i < other.size(); i++) {
 				String username = other.get(i).getUsername();
 				String email = other.get(i).getEmail();
 				int age = other.get(i).getAge();
+				
 				String gender = other.get(i).getGender();
 				String loud = other.get(i).getLoud();
 				String tv = other.get(i).getTv();
@@ -63,16 +64,16 @@
 				String maxRent = other.get(i).getMaxRent();
 				String profileImg = other.get(i).getProfileImage();
 		%>
-		<a
-			href=<%="singleprofile.jsp?username=" + username + "&email=" + email + "&age=" + age + "&gender="
+		
+		<a href=<%="singleprofile.jsp?username=" + username + "&email=" + email + "&age=" + age + "&gender="
 						+ gender + "&loud=" + loud + "&tv=" + tv + "&games=" + games + "&cook=" + cooking + "&homeTime="
 						+ homeTime + "&homeAmount=" + homeAmount + "&clean=" + clean + "&maxNum=" + maxNum + "&edu="
-						+ edu + "&maxRent=" + maxRent + "&profileImg=" + profileImg%>>
+						+ edu + "&maxRent=" + maxRent + "&profileImg=" + profileImg %> >
 
 
 			<div id="profile01">
 				<div id="profiles01">
-					<div id="profileImage01">
+					<div >
 
 						<%
 							if (other.get(i).getProfileImage() != null) {

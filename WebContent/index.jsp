@@ -32,7 +32,8 @@
 </head>
 
 <body>
-
+<%        session.removeAttribute("user");
+ %>
 	<%@include file="header.jsp"%>
 
 	<!-- Put your page content here! -->

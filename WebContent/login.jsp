@@ -47,7 +47,8 @@
 				<div class="logForm">
 					<div id="logText">
 						<div id="inputText">
-
+<%        session.removeAttribute("user");
+ %>
 							<%
 								if (session.getAttribute("username") == null || session.getAttribute("username") == "") {
 							%>
