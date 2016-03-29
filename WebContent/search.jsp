@@ -5,14 +5,12 @@
 
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="">
 <meta name="author" content="">
 
-<title>Profile</title>
+<title>Search</title>
 
 <!-- Bootstrap Core CSS -->
 <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -20,19 +18,12 @@
 <!-- Custom CSS -->
 <link href="css/style.css" rel="stylesheet">
 
-<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-<!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
 
 </head>
 
 <body>
 
 	<%@include file="header.jsp"%>
-
 
             <form action="SearchServlet" method="post">
                 <div class="profilegroup">
@@ -140,7 +131,7 @@
                                                 </select>
                                                 Max:
                                                 <select name="maxAge" id="maxAge">
-                                                    <option value="16">16</option>                                               <option value="16">16</option>
+                                                    <option value="16">16</option>                                            
                                                     <option value="17">17</option>
                                                     <option value="18">18</option>
                                                     <option value="19">19</option>

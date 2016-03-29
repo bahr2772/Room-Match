@@ -1,6 +1,7 @@
 package root;
 
 import java.io.IOException;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -44,16 +45,13 @@ public class SearchServlet extends HttpServlet {
 		String maxRent = request.getParameter("maxRent");
 		String edu = request.getParameter("edu");
 		String videoGames = request.getParameter("video");
+		String preRmGen = request.getParameter("roomGen");
 		search.readFile();
-		search.runSearch(name, minAge,maxAge,gender, clean, tv, loud, cook, homeTime, maxRent,edu,videoGames);
+		search.runSearch(name, minAge,maxAge,gender, clean, tv, loud, cook, homeTime, maxRent,edu,videoGames,preRmGen);
 		search.sortRanking(request);	
 		
 		session.setAttribute("search", "sent");
-		//search.sortRanking(request);
-		//search.sortRanking());
-		//session.setAttribute("rankList", "test");
-		//session.setAttribute("rankList",nameResults);
-		//System.out.println(search.getUserList());
+	
 		response.sendRedirect("results.jsp");
 	}
 

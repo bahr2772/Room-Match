@@ -29,10 +29,10 @@
     <!-- Put your page content here! -->
  
         <form action="RegisterServlet" method="post" id="regText">
-    Name:<br> <input type="text" name="username"  id="regNameIn"><br>
-    Email:<br>  <input type="email" name="email" id="regEmailIn"><br>
-    Password:<br> <input type="password" name="password1" id="regPass1In"> <br>
-    Re-enter Password:<br> <input type="password" name="password2" id="regPass2In" >
+    Name:<br> <input type="text" name="username"  id="regNameIn" pattern="[^'\x22]+" title="Invalid input" required ><br>
+    Email:<br>  <input type="email" name="email" id="regEmailIn" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" required><br>
+    Password:<br> <input type="password" name="password1" id="regPass1In" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" required> <br>
+    Re-enter Password:<br> <input type="password" name="password2" id="regPass2In"pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" required>
         
 <!--         user in Db -->
       <% if(session.getAttribute("user") == "userInDb") { %>

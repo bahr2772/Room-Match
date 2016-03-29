@@ -72,5 +72,20 @@ public class GetUser {
 
 
 	}
+	
+	public void getTopMatch(User user, HttpServletRequest request){
+
+		HttpSession session = request.getSession();
+
+			Search search = new Search();
+			search.runSearch(user.getName(), user.getAge() - 10, user.getAge() + 10, user.getPreferRmGen(), user.getClean(), user.getTv(), 
+					user.getLoud(), user.getCook(), user.getHomeTime(), user.getMaxRent(), user.getEdu(), user.getGames(), user.getGender());
+			search.sortRanking(request);
+			
+			
+		
+	}
+	
+	
 
 }

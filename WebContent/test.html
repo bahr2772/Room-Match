@@ -1,0 +1,41 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<link rel="stylesheet" href="/Users/bahr2772/Documents/workspace/HangmanWeb/WebContent/HangmanStyle.css">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Hangman Game</title>
+</head>
+<body>
+
+		<div class=container>
+			<div id=heading>
+				<h1>Hang the Man Game</h1>
+			</div>
+			<div class=content>
+				here is the content<br> Incorrect Guesses:
+				Correct Guesses:
+				<br>
+					<img src="/Users/bahr2772/Documents/workspace/HangmanWeb/WebContent/files</mtPole.png" id="hangPic">
+				<br>
+				
+					<div class=contentFoot>
+						Word:
+						<br>
+						<form action="HangmanServlet" method="POST">
+							<input type=text name="guess" placeholder="Enter Guess"
+								maxlength="1" REQUIRED>
+							<button type="submit" class="logBtn" id="submit">Enter
+								Guess</button>
+
+						</form>
+						<br> Guesses:<br>
+							<br><a href= "index.jsp">Quit?</a> <a href="hangmanstart.jsp">New Word</a>
+			
+				
+            </div>
+            </div></div>
+
+</body>
+</html>
